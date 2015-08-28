@@ -1,0 +1,109 @@
+{
+    "template_opf" : {
+        "template" : "*_opf",
+        "mappings" : {
+		"_default_" : {
+			"_all" : {
+				"enabled" : false
+			}
+		},
+		"OnlinePref": {
+			"dynamic_templates":[
+				{
+					"str_ik":{
+						"match":"*_ik",
+						"match_mapping_type":"string",
+						"mapping":{
+							"type":"string",
+							"index":"analyzed",
+							"analyzer":"ik"
+						}
+					}
+				},
+				{
+					"str_default":{
+						"match":"*_s",
+						"match_mapping_type":"string",
+						"mapping":{
+							"type":"string",
+							"index":"analyzed"						
+						}
+					}
+				},
+				{
+					"str_na":{
+						"match":"*",
+						"match_mapping_type":"string",
+						"mapping":{
+							"type":"string",
+							"index":"not_analyzed"						
+						}
+					}
+				}
+			],
+			"_ttl" : { 
+				"enabled" : true, 
+				"default" : "90d"
+			},
+			"properties":{		
+				"uid":{
+					"type":"string",
+					"index":"not_analyzed"
+				},
+				"guid":{
+					"type":"string",
+					"index":"not_analyzed"
+				},
+				"session":{
+					"type":"string",
+					"index":"not_analyzed"
+				},
+				"device":{
+					"type":"string",
+					"index":"not_analyzed"
+				},	
+				"gid":{
+					"type":"string",
+					"index":"not_analyzed"
+				},			
+				"category_code":{
+					"type":"string",
+					"index":"not_analyzed"
+				},
+				"category_code_le":{
+					"type":"string",
+					"index":"not_analyzed"
+				},
+				"client_ip":{
+					"type":"ip"
+				},
+				"page_type":{
+					"type":"string",
+					"index":"not_analyzed"
+				},
+				"url":{
+					"type":"string",
+					"index": "no"
+				},
+				"geo_location" : {
+					"type" : "geo_point"
+				},
+				"insert_min_dt":{
+					"type":"date",
+					"format":"yyyy-MM-dd HH:mm:ss||dateOptionalTime",
+					"numeric_resolution" : "minutes"
+				},
+				"insert_dt":{
+					"type":"date",
+					"index":"no",
+					"format":"yyyy-MM-dd HH:mm:ss||dateOptionalTime",
+					"numeric_resolution" : "seconds"				
+				}
+			}
+		}
+
+
+
+        }
+    }
+}
