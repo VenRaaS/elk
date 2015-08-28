@@ -21,3 +21,7 @@ for more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/refer
    
 #### Create indices
 A customer (tenant) consists of 4 indices (DB).
+* ${custname}_bat
+* ${custname}_oua
+* ${custname}_opf
+* ${custname}_bill
