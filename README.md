@@ -25,3 +25,15 @@ A customer (tenant) consists of 4 indices (DB).
 * ${custname}_oua
 * ${custname}_opf
 * ${custname}_bill
+
+TODO
+```
+POST http://140.96.83.31:9200/x_bill/api_rec/20150829/_update
+{
+  "script": "ctx._source.count += 1",
+  "upsert": {
+    "count": 1,
+    "update_time": "2015-08-29 10:24:09"
+  }
+}
+```
