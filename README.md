@@ -10,9 +10,9 @@ All configuration and binary of Elasticsearch, Logstash and Kibana are placed he
 * browse `localhost:9200` check response message
 ```
 {
-    status: 200,
-    name: "Thing",
-    cluster_name: "elasticsearch",
-    ...
+  "status" : 200,
+  "name" : "Thing",
+  "cluster_name" : "elasticsearch",
+  ...
 }
 ```
