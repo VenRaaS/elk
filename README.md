@@ -5,4 +5,4 @@ All configuration and binary of Elasticsearch, Logstash and Kibana are placed he
 
 ### Elasticsearch
 #### Installation
-* download and extract from Github
+* download and extract from [Github](https://github.com/VenRaaS/elk.git)
