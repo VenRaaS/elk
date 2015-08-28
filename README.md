@@ -7,7 +7,7 @@ All configuration and binary of Elasticsearch, Logstash and Kibana are placed he
 #### Installation
 1. download and extract from [Github](https://github.com/VenRaaS/elk.git)
 2. execute `bin\elasticsearch.bat`, (or `bin\elasticsearch.bat` if linux link OS)
-3. browse `localhost:9200` check response message, which should look like as below.
+3. browse `http://localhost:9200` and check whether the response message looks as below. For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html). 
 ```
 {
   "status" : 200,
@@ -16,4 +16,4 @@ All configuration and binary of Elasticsearch, Logstash and Kibana are placed he
   ...
 }
 ```
-   For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
+   
