@@ -26,7 +26,24 @@ Each customer (tenant) consists of 4 indices (DB) for different purposes.
 * ${custName}_opf - online prefernce pool
 * ${custName}_bill - api calling count for billing
 
-TODO
+An index creation can be performed using a restful api request.  
+The response message will show as below if the index has been created successfully.
+```
+{
+"acknowledged": true
+}
+```
+
+##### API for ${custName}_bat creatation
+The following example creates a bill index of the company, i.e. `goshopping`
+Request
+```
+POST http://localhost:9200/goshopping_bill/
+```
+
+
+
+
 ```
 POST http://140.96.83.31:9200/x_bill/api_rec/20150829/_update
 {
