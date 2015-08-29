@@ -30,7 +30,7 @@ An index creation can be performed using a restful api request.
 The response message will show as below if the index has been created successfully.
 ```
 {
-"acknowledged": true
+  "acknowledged": true
 }
 ```
 
