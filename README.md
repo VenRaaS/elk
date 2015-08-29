@@ -1,6 +1,6 @@
 # TOC
-* [Elasticsearch](Elasticsearch)  
-    [Counting API requests](counting-api-requests)
+* [Elasticsearch](#Elasticsearch)  
+    [Counting API requests](#counting-api-requests)
 
 ### Introduction
 
