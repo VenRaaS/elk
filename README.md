@@ -27,13 +27,6 @@ Each customer (tenant) consists of 4 indices (DB) for different purposes.
 * ${custName}_opf - online prefernce pool
 
 An index creation can be performed using a **restful api** request.  
-The response message will show as below if the index has been created successfully.
-```
-{
-  "acknowledged": true
-}
-```
-
 The following examples create 4 indices regarding  a company, i.e. `goshopping`.
 
 ##### Create ${custName}_bat
@@ -56,6 +49,12 @@ POST http://localhost:9200/goshopping_oua/
 POST http://localhost:9200/goshopping_opf/
 ```
 
+The response message will show as below if the index has been created successfully.
+```
+{
+  "acknowledged": true
+}
+```
 
 
 ```
