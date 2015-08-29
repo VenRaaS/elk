@@ -42,7 +42,8 @@ For each request, Elasticsearch responds as follows if the index has been create
 }
 ```
 
-
+#### Counting API requests 
+TODO...
 ```
 POST http://140.96.83.31:9200/x_bill/api_rec/20150829/_update
 {
