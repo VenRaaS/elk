@@ -1,4 +1,8 @@
-# Introduction
+# TOC
+* [Elasticsearch](Elasticsearch)  
+    [Counting API requests](counting-api-requests)
+
+### Introduction
 
 This project applies [ELS](https://www.elastic.co/webinars/introduction-elk-stack) to make a nearly real time recommention system.   
 All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www.elastic.co/) are placed here.
