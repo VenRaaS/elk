@@ -26,13 +26,14 @@ Each customer (tenant) consists of 4 indices (DB) for different purposes.
 * ${custName}_oua - online user alignment
 * ${custName}_opf - online prefernce pool
 
-An index creation can be performed using a **restful api** request.  
-The following examples create 4 indices regarding  a company, i.e. `goshopping`.
+An index creation can be performed using a **restful api** request. 
+For example, 
+if our customer is titled `goshopping`, then the requests look like below.
 
-* ```POST http://localhost:9200/goshopping_bat/``` to create ${custName}_bat
-* ```POST http://localhost:9200/goshopping_bill/``` to create ${custName}_bill
-* ```POST http://localhost:9200/goshopping_oua/``` to create ${custName}_oua 
-* ```POST http://localhost:9200/goshopping_opf/``` to Create ${custName}_opf 
+* ```POST http://localhost:9200/goshopping_bat/``` 
+* ```POST http://localhost:9200/goshopping_bill/``` 
+* ```POST http://localhost:9200/goshopping_oua/``` 
+* ```POST http://localhost:9200/goshopping_opf/``` 
 
 
 The response message will show as below if the index has been created successfully.
