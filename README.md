@@ -21,9 +21,9 @@ for more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/refer
    
 #### Create indices
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
-* ${custName}_bat  - batch data
-* ${custName}_oua  - online user alignment
-* ${custName}_opf  - online prefernce pool
+* ${custName}_bat - batch data
+* ${custName}_oua - online user alignment
+* ${custName}_opf - online prefernce pool
 * ${custName}_bill - api calling count for billing
 
 TODO
