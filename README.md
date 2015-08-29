@@ -21,14 +21,14 @@ for more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/refer
    
 #### Create indices
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
-* ${custName}_bat - batch data
-* ${custName}_bill - api calling count for billing
-* ${custName}_oua - online user alignment
-* ${custName}_opf - online prefernce pool
+* **${custName}_bat** - batch data
+* **${custName}_bill** - api calling count for billing
+* **${custName}_oua** - online user alignment
+* **${custName}_op**f - online prefernce pool
 
 An index creation can be performed using a **restful api** request.  
 For example, 
-if our customer is titled `goshopping`, then the creation requests of 4 indices look like below.
+if our customer is titled `goshopping`, then the creation requests of the 4 indices look like following.
 
 * ```POST http://localhost:9200/goshopping_bat/``` 
 * ```POST http://localhost:9200/goshopping_bill/``` 
