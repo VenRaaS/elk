@@ -22,6 +22,7 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 4. browse `http://localhost:9200` and check whether the response message looks as below.  
    `{"status" : 200, "name" : "Thing", "cluster_name" : "elasticsearch", ... }`
 5. browse `http://localhost:9200/_plugin/head/` for [elasticsearch-head](http://mobz.github.io/elasticsearch-head/)
+
 For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
 
 
