@@ -5,6 +5,7 @@
   * [Installation](#installation)
   * [Create indices](#create-indices)
     * [Customer data structure](#customer-data-structure)
+    * [Ppreliminary](#preliminary)
     * [VenRaaS AAA sync](#venraas-aaa-sync)
   * [Counting API requests](#counting-api-requests)
 
