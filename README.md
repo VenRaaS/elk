@@ -21,7 +21,7 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
   ...
 }
 ```
-for more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html). 
+For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html). 
    
 #### Create indices
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
