@@ -1,5 +1,7 @@
 # TOC
-* [Elasticsearch](#Elasticsearch)  
+* [Introduction](#introduction)
+* [Prerequisite](#prerequisite)
+* [Elasticsearch](#elasticsearch)  
   * [Create indices](#create-indices)
   * [Counting API requests](#counting-api-requests)
 
@@ -8,8 +10,8 @@
 This project applies [ELS](https://www.elastic.co/webinars/introduction-elk-stack) to make a nearly real time recommention system.   
 All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www.elastic.co/) are placed here.
 
-### prerequisite
-* 
+### Prerequisite
+* Java runtime (JRE) 1.7+
 
 ### Elasticsearch
 #### Installation
