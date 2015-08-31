@@ -29,6 +29,7 @@ For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/refer
 #### Preliminary 
 
 
+
 #### Create indices
 
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
