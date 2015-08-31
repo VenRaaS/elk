@@ -40,6 +40,8 @@ Each customer (tenant) consists of 4 indices (DB) for different purposes.
 * **{custName}_oua** - online user alignment
 * **{custName}_opp** - online prefernce pool
 
+The structure of indices and typies in terms of a customer illustrates with following image.
+
 ![](https://drive.google.com/uc?id=0B78KhWqVkVmtcEpqby1CUVYzQW8)
 
 An index creation can be performed using a **restful api** request.  
