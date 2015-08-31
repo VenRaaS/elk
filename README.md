@@ -2,6 +2,7 @@
 * [Introduction](#introduction)
 * [Prerequisite](#prerequisite)
 * [Elasticsearch](#elasticsearch)  
+  * [Installation](#installation)
   * [Create indices](#create-indices)
   * [Counting API requests](#counting-api-requests)
 
