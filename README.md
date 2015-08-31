@@ -58,7 +58,8 @@ We stores daily recom'd API request counting information under **{custName}_bill
 
 ##### API to increamt the count of recom'd requests
 ```
-POST http://localhost:9200/goshopping_bill/api_rec/20150829/_update
+POST
+http://localhost:9200/goshopping_bill/api_rec/20150829/_update
 {
   "script": "ctx._source.count += 1",
   "upsert": {
@@ -71,6 +72,7 @@ POST http://localhost:9200/goshopping_bill/api_rec/20150829/_update
 ##### API to query counting information
 Query all daily count info from 2015-08-29
 ```
-GET http://140.96.83.31:9200/goshopping_bill/api_rec/_search?q=update_time:[2015-08-29 TO *]
+GET 
+http://140.96.83.31:9200/goshopping_bill/api_rec/_search?q=update_time:[2015-08-29 TO *]
 ```
 
