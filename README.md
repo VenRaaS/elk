@@ -8,6 +8,9 @@
 This project applies [ELS](https://www.elastic.co/webinars/introduction-elk-stack) to make a nearly real time recommention system.   
 All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www.elastic.co/) are placed here.
 
+### prerequisite
+* 
+
 ### Elasticsearch
 #### Installation
 1. download and extract from [Github](https://github.com/VenRaaS/elk.git), i.e. click [Download ZIP](https://github.com/VenRaaS/elk/archive/master.zip)
