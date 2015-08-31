@@ -34,6 +34,8 @@ The concept of the data structure relationship regarding {index}, {type} and {id
 
 #### Create indices
 
+##### Customer data structure
+
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
 * **{cust}_bat** - batch data
 * **{cust}_bill** - api calling count for billing
@@ -70,6 +72,47 @@ For each request, Elasticsearch responds as follows if the index has been create
   "acknowledged": true
 }
 ```
+
+##### VenRaaS AAA (authentication, authorization, and accounting) sync
+venraas index creation:
+```
+POST 
+http://localhost:9200/goshopping_opp/venraas
+```
+
+AAA data sync:
+```
+POST
+http://localhost:9200/goshopping_bill/com_pkgs
+{
+  "webServerTime": "2015-08-04 12:11:22",
+  "companies": [
+    {
+      "comId": 1,
+      "comName": "goshopping",
+      "domainName": "www.goshopping.com",
+      "UUID": "xyzxxxx",
+      "package": {
+        "packageId": 68,
+        "packageName": "A suit",
+        "packageEnableed": true,
+        "apiRequestMax": 21000123,
+        "userAccountMax": 11,
+        "authList": [
+          {
+            "authId": 100,
+            "authName": "總和all 總覽overview",
+            "authEnabled": true,
+            "authType": "TYPE_1_REPORT"
+          },
+          ...
+        ]
+      }
+    }
+  ]
+}
+```
+
 
 #### Counting API requests 
 We stores daily recom'd API request counting information under **{cust}_bill/rec_ap/{yyyMMdd}**.  
