@@ -15,6 +15,7 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 * Java runtime (JRE) 1.7+
 
 ### Elasticsearch
+
 #### Installation
 1. download and extract from [Github](https://github.com/VenRaaS/elk.git), i.e. click [Download ZIP](https://github.com/VenRaaS/elk/archive/master.zip)
 2. enter [CLI](https://en.wikipedia.org/wiki/Command-line_interface) mode and change working dir to `elasticsearch-1.7.1_ik\`
@@ -25,10 +26,11 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 
 For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
 
+#### Preliminary 
 
-### preliminary
 
 #### Create indices
+
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
 * **{custName}_bat** - batch data
 * **{custName}_bill** - api calling count for billing
