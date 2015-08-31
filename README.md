@@ -27,7 +27,7 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
 
 #### Preliminary 
-[https://drive.google.com/open?id=0B78KhWqVkVmtVm9mZ014M0sxSEE]
+!()[https://drive.google.com/uc?id=0B78KhWqVkVmtVm9mZ014M0sxSEE]
 
 
 #### Create indices
