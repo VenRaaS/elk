@@ -69,7 +69,7 @@ POST http://localhost:9200/goshopping_bill/api_rec/20150829/_update
 ```
 
 ##### API to query counting information
-Query all daily count information from 2015-08-29
+Query all daily count info from 2015-08-29
 ```
 http://140.96.83.31:9200/goshopping_bill/api_rec/_search?q=update_time:[2015-08-29 TO *]
 ```
