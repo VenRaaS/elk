@@ -1,5 +1,6 @@
 # TOC
 * [Elasticsearch](#Elasticsearch)  
+  * [Create indices](#create-indices)
   * [Counting API requests](#counting-api-requests)
 
 ### Introduction
