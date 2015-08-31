@@ -1,7 +1,7 @@
 # TOC
 * [Introduction](#introduction)
 * [Prerequisite](#prerequisite)
-* [Elasticsearch](#elasticsearch)  
+* [Elasticsearch](#elasticsearch)
   * [Installation](#installation)
   * [Create indices](#create-indices)
   * [Counting API requests](#counting-api-requests)
@@ -35,10 +35,10 @@ The concept of the data structure relationship regarding {index}, {type} and {id
 #### Create indices
 
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
-* **{custName}_bat** - batch data
-* **{custName}_bill** - api calling count for billing
-* **{custName}_oua** - online user alignment
-* **{custName}_opp** - online prefernce pool
+* **{cust}_bat** - batch data
+* **{cust}_bill** - api calling count for billing
+* **{cust}_oua** - online user alignment
+* **{cust}_opp** - online prefernce pool
 
 The structure of indices and typies in terms of a customer illustrates with following image.
 
@@ -72,7 +72,7 @@ For each request, Elasticsearch responds as follows if the index has been create
 ```
 
 #### Counting API requests 
-We stores daily recom'd API request counting information under **{custName}_bill/rec_ap/{yyyMMdd}**.  
+We stores daily recom'd API request counting information under **{cust}_bill/rec_ap/{yyyMMdd}**.  
 
 ##### API to increamt the count of recom'd requests
 ```
