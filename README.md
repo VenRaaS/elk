@@ -48,6 +48,7 @@ For each request, Elasticsearch responds as follows if the index has been create
 ```
 
 #### Counting API requests 
+We stores recom'd API request counting information under **${custName}_bill/rec_api** 
 TODO...
 ```
 POST http://localhost:9200/goshopping_bill/api_rec/20150829/_update
