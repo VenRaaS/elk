@@ -27,8 +27,8 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
 
 #### Preliminary 
-Data in ES is able to be access by the restful API, e.g. http://localhost:9200/{index}/{type}/{id}.
-The concept of the major data structure of ES could be thought as following picture.
+Data in ES is able to be access by the restful API, e.g. `http://localhost:9200/{index}/{type}/{id}`.  
+The concept of the data structure relationship regarding {index}, {type} and {id} in ES could be thought as following picture.
 ![](https://drive.google.com/uc?id=0B78KhWqVkVmtS0djcjU3QWZsYnc)
 
 #### Create indices
