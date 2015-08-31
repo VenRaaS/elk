@@ -5,7 +5,7 @@
   * [Installation](#installation)
   * [Create indices](#create-indices)
     * [Customer data structure](#customer-data-structure)
-    * [Customer data structure](#customer-data-structure)
+    * [VenRaaS AAA sync](#venraas-aaa--sync)
   * [Counting API requests](#counting-api-requests)
 
 ### Introduction
@@ -75,7 +75,7 @@ For each request, Elasticsearch responds as follows if the index has been create
 }
 ```
 
-##### VenRaaS AAA  sync
+##### VenRaaS AAA sync
 The AAA (authentication, authorization, and accounting) info is available under http://localhost:9200/venraas/com_pkgs
 
 venraas index creation:
