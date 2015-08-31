@@ -4,6 +4,8 @@
 * [Elasticsearch](#elasticsearch)
   * [Installation](#installation)
   * [Create indices](#create-indices)
+    * [Customer data structure](#customer-data-structure)
+    * [Customer data structure](#customer-data-structure)
   * [Counting API requests](#counting-api-requests)
 
 ### Introduction
@@ -73,17 +75,19 @@ For each request, Elasticsearch responds as follows if the index has been create
 }
 ```
 
-##### VenRaaS AAA (authentication, authorization, and accounting) sync
+##### VenRaaS AAA  sync
+The AAA (authentication, authorization, and accounting) info is available under http://localhost:9200/venraas/com_pkgs
+
 venraas index creation:
 ```
 POST 
-http://localhost:9200/goshopping_opp/venraas
+http://localhost:9200/venraas
 ```
 
-AAA data sync:
+sync info of AAA:
 ```
 POST
-http://localhost:9200/goshopping_bill/com_pkgs
+http://localhost:9200/venraas/com_pkgs
 {
   "webServerTime": "2015-08-04 12:11:22",
   "companies": [
