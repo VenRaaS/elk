@@ -1,6 +1,6 @@
 {
-    "template_opf" : {
-        "template" : "*_opf",
+    "template_opp" : {
+        "template" : "*_opp",
         "mappings" : {
 		"_default_" : {
 			"_all" : {
