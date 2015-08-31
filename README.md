@@ -43,16 +43,19 @@ if our customer is titled `goshopping`, then the creation requests of the 4 indi
 
 * ```
  POST 
- http://localhost:9200/goshopping_bat/
- ``` 
-* 
+ http://localhost:9200/goshopping_bat/``` 
+
 * ```
-* POST 
-* http://localhost:9200/goshopping_bill/
-* ``` 
-* 
-* ```POST http://localhost:9200/goshopping_oua/``` 
-* ```POST http://localhost:9200/goshopping_opf/``` 
+ POST 
+ http://localhost:9200/goshopping_bill/``` 
+
+* ```
+ POST 
+ http://localhost:9200/goshopping_oua/``` 
+
+* ```
+ POST 
+ http://localhost:9200/goshopping_opf/``` 
 
 For each request, Elasticsearch responds as follows if the index has been created successfully.
 ```
