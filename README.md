@@ -42,9 +42,9 @@ For example,
 if our customer is titled `goshopping`, then the creation requests of the 4 indices look like follows.
 
 * ```
-* POST 
-* http://localhost:9200/goshopping_bat/
-* ``` 
+ POST 
+ http://localhost:9200/goshopping_bat/
+ ``` 
 * 
 * ```
 * POST 
