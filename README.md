@@ -26,10 +26,10 @@ For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/refer
    
 #### Create indices
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
-* **${custName}_bat** - batch data
-* **${custName}_bill** - api calling count for billing
-* **${custName}_oua** - online user alignment
-* **${custName}_op**f - online prefernce pool
+* **{custName}_bat** - batch data
+* **{custName}_bill** - api calling count for billing
+* **{custName}_oua** - online user alignment
+* **{custName}_op**f - online prefernce pool
 
 An index creation can be performed using a **restful api** request.  
 For example, 
@@ -48,8 +48,9 @@ For each request, Elasticsearch responds as follows if the index has been create
 ```
 
 #### Counting API requests 
-We stores recom'd API request counting information under **${custName}_bill/rec_api** 
-TODO...
+We stores daily recom'd API request counting information under **{custName}_bill/rec_ap/{yyyMMdd}**.  
+
+##### API to increamt the count of recom'd requests
 ```
 POST http://localhost:9200/goshopping_bill/api_rec/20150829/_update
 {
@@ -60,3 +61,9 @@ POST http://localhost:9200/goshopping_bill/api_rec/20150829/_update
   }
 }
 ```
+
+##### API to query counting information
+```
+
+```
+
