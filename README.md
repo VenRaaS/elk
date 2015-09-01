@@ -43,7 +43,7 @@ Each customer (tenant) consists of 4 indices (DB) for different purposes.
 * **{cust}_bat** - batch data
 * **{cust}_bill** - api calling count for billing
 * **{cust}_oua** - online user alignment
-* **{cust}_opp** - online prefernce pool
+* **{cust}_opp** - online preference pool
 
 The structure of indices and typies in terms of a customer illustrates with following image.
 
