@@ -29,7 +29,7 @@
 # Cluster name identifies your cluster for auto-discovery. If you're running
 # multiple clusters on the same network, make sure you're using unique names.
 #
-#cluster.name: elasticsearch
+cluster.name: westernwall
 
 
 #################################### Node #####################################
@@ -37,7 +37,7 @@
 # Node names are generated dynamically on startup, so you're relieved
 # from configuring them manually. You can tie this node to a specific name:
 #
-#node.name: "Franz Kafka"
+node.name: "ww_001"
 
 # Every node can be configured to allow or deny being eligible as the master,
 # and to allow or deny to store the data.
@@ -137,6 +137,18 @@
 # Use the Index Status API (<http://localhost:9200/A/_status>) to inspect
 # the index status.
 
+index:
+  analysis:
+    analyzer:
+      ik:
+          alias: [ik_analyzer]
+          type: org.elasticsearch.index.analysis.IkAnalyzerProvider
+      ik_max_word:
+          type: ik
+          use_smart: false
+      ik_smart:
+          type: ik
+          use_smart: true
 
 #################################### Paths ####################################
 
@@ -181,7 +193,7 @@
 #
 # Set this property to true to lock the memory:
 #
-#bootstrap.mlockall: true
+bootstrap.mlockall: true
 
 # Make sure that the ES_MIN_MEM and ES_MAX_MEM environment variables are set
 # to the same value, and that the machine has enough memory to allocate
@@ -318,12 +330,13 @@
 #
 # 1. Disable multicast discovery (enabled by default):
 #
-#discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.multicast.enabled: false
 #
 # 2. Configure an initial list of master nodes in the cluster
 #    to perform discovery when new nodes (master or data) are started:
 #
 #discovery.zen.ping.unicast.hosts: ["host1", "host2:port"]
+discovery.zen.ping.unicast.hosts: ["ww_001", "ww_002", "ww_003"]
 
 # EC2 discovery allows to use AWS EC2 API in order to perform discovery.
 #
@@ -384,20 +397,8 @@
 #
 #http.jsonp.enable: true
 
+################################## Script ################################
 script.inline: on
 script.indexed: on
-
-index:
-  analysis:
-    analyzer:
-      ik:
-          alias: [ik_analyzer]
-          type: org.elasticsearch.index.analysis.IkAnalyzerProvider
-      ik_max_word:
-          type: ik
-          use_smart: false
-      ik_smart:
-          type: ik
-          use_smart: true
 
 
