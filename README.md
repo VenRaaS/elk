@@ -1,9 +1,12 @@
 # TOC
 * [Introduction](#introduction)
 * [Prerequisite](#prerequisite)
-* [Elasticsearch](#elasticsearch)  
+* [Elasticsearch](#elasticsearch)
   * [Installation](#installation)
   * [Create indices](#create-indices)
+    * [Customer data structure](#customer-data-structure)
+    * [Preliminary](#preliminary)
+    * [VenRaaS AAA sync](#venraas-aaa-sync)
   * [Counting API requests](#counting-api-requests)
 
 ### Introduction
@@ -22,7 +25,7 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 3. execute `bin\elasticsearch.bat`, (or `bin/elasticsearch` if linux like OS)
 4. browse `http://localhost:9200` and check whether the response message looks as below.  
    `{"status" : 200, "name" : "Thing", "cluster_name" : "elasticsearch", ... }`
-5. browse `http://localhost:9200/_plugin/head/` for [elasticsearch-head](http://mobz.github.io/elasticsearch-head/)
+5. check `http://localhost:9200/_plugin/head/` for managemnet console [elasticsearch-head](http://mobz.github.io/elasticsearch-head/)
 
 For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
 
@@ -34,11 +37,17 @@ The concept of the data structure relationship regarding {index}, {type} and {id
 
 #### Create indices
 
+##### Customer data structure
+
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
-* **{custName}_bat** - batch data
-* **{custName}_bill** - api calling count for billing
-* **{custName}_oua** - online user alignment
-* **{custName}_opp** - online prefernce pool
+* **{cust}_bat** - batch data
+* **{cust}_bill** - api calling count for billing
+* **{cust}_oua** - online user alignment
+* **{cust}_opp** - online preference pool
+
+The structure of indices and typies in terms of a customer illustrates with following image.
+
+![](https://drive.google.com/uc?id=0B78KhWqVkVmtcEpqby1CUVYzQW8)
 
 An index creation can be performed using a **restful api** request.  
 For example, 
@@ -67,8 +76,51 @@ For each request, Elasticsearch responds as follows if the index has been create
 }
 ```
 
+##### VenRaaS AAA sync
+The AAA (authentication, authorization, and accounting) info is available under `http://localhost:9200/venraas/com_pkgs`
+
+venraas index creation:
+```
+POST 
+http://localhost:9200/venraas
+```
+
+sync info of AAA:
+```
+POST
+http://localhost:9200/venraas/com_pkgs
+{
+  "webServerTime": "2015-08-04 12:11:22",
+  "companies": [
+    {
+      "comId": 1,
+      "comName": "goshopping",
+      "domainName": "www.goshopping.com",
+      "UUID": "xyzxxxx",
+      "package": {
+        "packageId": 68,
+        "packageName": "A suit",
+        "packageEnableed": true,
+        "apiRequestMax": 21000123,
+        "userAccountMax": 11,
+        "authList": [
+          {
+            "authId": 100,
+            "authName": "總和all 總覽overview",
+            "authEnabled": true,
+            "authType": "TYPE_1_REPORT"
+          },
+          ...
+        ]
+      }
+    }
+  ]
+}
+```
+
+
 #### Counting API requests 
-We stores daily recom'd API request counting information under **{custName}_bill/rec_ap/{yyyMMdd}**.  
+We stores daily recom'd API request counting information under **{cust}_bill/rec_ap/{yyyMMdd}**.  
 
 ##### API to increamt the count of recom'd requests
 ```
