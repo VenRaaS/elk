@@ -36,6 +36,10 @@ The concept of the data structure relationship regarding {index}, {type} and {id
 ![](https://drive.google.com/uc?id=0B78KhWqVkVmtS0djcjU3QWZsYnc)
 
 #### Create indices
+##### Overview of indices
+The structure of indices and typies with respect to venraas and customers illustrates with following image.
+
+<img src="https://drive.google.com/uc?id=0B78KhWqVkVmtczFPNlN2Y2JPQW8" width="700">
 
 ##### Customer data structure
 
@@ -44,10 +48,6 @@ Each customer (tenant) consists of 4 indices (DB) for different purposes.
 * **{cust}_bill** - api calling count for billing
 * **{cust}_oua** - online user alignment
 * **{cust}_opp** - online preference pool
-
-The structure of indices and typies in terms of a customer illustrates with following image.
-
-![](https://drive.google.com/uc?id=0B78KhWqVkVmtcEpqby1CUVYzQW8)
 
 An index creation can be performed using a **restful api** request.  
 For example, 
