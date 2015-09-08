@@ -62,36 +62,31 @@
                     "goods_name":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",
-                        "store":true,
+                        "analyzer":"ik",                        
                         "term_vector":"with_positions_offsets_payloads"
                     },
                     "goods_keyword":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",
-                        "store":true,
+                        "analyzer":"ik",                        
                         "term_vector":"with_positions_offsets_payloads"
                     },
                     "goods_brand":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",
-                        "store":true,
+                        "analyzer":"ik",                        
                         "term_vector":"with_positions_offsets_payloads"
                     },
                     "goods_describe":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",
-                        "store":true,
+                        "analyzer":"ik",                        
                         "term_vector":"with_positions_offsets_payloads"
                     },
                     "goods_spec":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",
-                        "store":true,
+                        "analyzer":"ik",                        
                         "term_vector":"with_positions_offsets_payloads"
                     },
                     "goods_img_url":{  
