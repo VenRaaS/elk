@@ -401,4 +401,9 @@ discovery.zen.ping.unicast.hosts: ["ww_001", "ww_002", "ww_003"]
 script.inline: on
 script.indexed: on
 
+################################## Threadpool ################################
+threadpool.bulk.queue_size: 300
+threadpool.index.type: "cached"
+threadpool.search.type: "cached"
+threadpool.get.type: "cached"
 
