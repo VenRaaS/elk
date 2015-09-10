@@ -44,6 +44,33 @@
                     }
                 ]
             },
+            "Category":{  
+                "properties":{  
+                    "category_name":{  
+                        "type":"string",
+						"index":"analyzed",
+						"analyzer":"ik",                        
+                        "term_vector":"with_positions_offsets"
+                    },
+					"p_category_code":{  
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
+                    "category_code":{  
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
+                    "le":{  
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },                    
+                    "update_time":{  
+                        "type":"date",
+                        "format":"dateOptionalTime",
+                        "numeric_resolution":"hours"
+                    }
+                }
+            },			
             "Goods":{  
                 "_id":{  
                     "index":"not_analyzed",
@@ -63,31 +90,31 @@
                         "type":"string",
                         "index":"analyzed",
                         "analyzer":"ik",                        
-                        "term_vector":"with_positions_offsets_payloads"
+                        "term_vector":"with_positions_offsets"
                     },
                     "goods_keyword":{  
                         "type":"string",
                         "index":"analyzed",
                         "analyzer":"ik",                        
-                        "term_vector":"with_positions_offsets_payloads"
+                        "term_vector":"with_positions_offsets"
                     },
                     "goods_brand":{  
                         "type":"string",
                         "index":"analyzed",
                         "analyzer":"ik",                        
-                        "term_vector":"with_positions_offsets_payloads"
+                        "term_vector":"with_positions_offsets"
                     },
                     "goods_describe":{  
                         "type":"string",
                         "index":"analyzed",
                         "analyzer":"ik",                        
-                        "term_vector":"with_positions_offsets_payloads"
+                        "term_vector":"with_positions_offsets"
                     },
                     "goods_spec":{  
                         "type":"string",
                         "index":"analyzed",
                         "analyzer":"ik",                        
-                        "term_vector":"with_positions_offsets_payloads"
+                        "term_vector":"with_positions_offsets"
                     },
                     "goods_img_url":{  
                         "type":"string",
