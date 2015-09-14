@@ -44,7 +44,7 @@
                     }
                 ]
             },
-            "Category":{  
+            "category":{  
                 "properties":{  
                     "category_name":{  
                         "type":"string",
@@ -71,7 +71,7 @@
                     }
                 }
             },			
-            "Goods":{  
+            "goods":{  
                 "_id":{  
                     "index":"not_analyzed",
                     "store":true,
@@ -154,7 +154,7 @@
                     }
                 }
             },
-            "GoodsCateCode":{  
+            "goodscatecode":{  
                 "properties":{  
                     "gid":{  
                         "type":"string",
@@ -183,7 +183,7 @@
                     }
                 }
             },
-            "Orderlist":{  
+            "orderlist":{
                 "properties":{  
                     "uid":{  
                         "type":"string",
@@ -240,7 +240,7 @@
                     }
                 }
             },
-            "Customer":{  
+            "customer":{  
                 "properties":{  
                     "uid":{  
                         "type":"string",
