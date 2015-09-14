@@ -70,12 +70,12 @@
 				"insert_dt":{  
 					"type":"date",
 					"index":"no",
-					"format":"yyyy-MM-dd HH:mm:ss||dateOptionalTime",
+					"format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
 					"numeric_resolution":"seconds"
 				},
 				"insert_min_dt":{  
 					"type":"date",
-					"format":"yyyy-MM-dd HH:mm:ss||dateOptionalTime",
+					"format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
 					"numeric_resolution":"minutes"
 				}
 			}

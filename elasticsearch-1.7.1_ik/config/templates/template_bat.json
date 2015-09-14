@@ -65,8 +65,8 @@
                         "index":"not_analyzed"
                     },                    
                     "update_time":{  
-                        "type":"date",
-                        "format":"dateOptionalTime",
+                        "type":"date",                        
+						"format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -144,11 +144,12 @@
                     },
                     "first_rts_date":{  
                         "type":"date",
-                        "format":"dateOptionalTime"
+                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+						"numeric_resolution":"hours"
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"dateOptionalTime",
+                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -177,7 +178,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"dateOptionalTime",
+                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -198,7 +199,8 @@
                     },
                     "order_date":{  
                         "type":"date",
-                        "format":"dateOptionalTime"
+                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+						"numeric_resolution":"minutes"
                     },
                     "gid":{  
                         "type":"string",
@@ -233,7 +235,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"dateOptionalTime",
+                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -267,7 +269,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"dateOptionalTime",
+                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
