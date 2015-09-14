@@ -50,7 +50,7 @@
                         "type":"string",
 						"index":"analyzed",
 						"analyzer":"ik",                        
-                        "term_vector":"with_positions_offsets"
+						"term_vector":"with_positions_offsets"
                     },
 					"p_category_code":{  
                         "type":"string",
@@ -65,8 +65,8 @@
                         "index":"not_analyzed"
                     },                    
                     "update_time":{  
-                        "type":"date",                        
-						"format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "type":"date",
+                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -145,7 +145,7 @@
                     "first_rts_date":{  
                         "type":"date",
                         "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
-						"numeric_resolution":"hours"
+                        "numeric_resolution":"hours"
                     },
                     "update_time":{  
                         "type":"date",
@@ -200,7 +200,7 @@
                     "order_date":{  
                         "type":"date",
                         "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
-						"numeric_resolution":"minutes"
+                        "numeric_resolution":"minutes"
                     },
                     "gid":{  
                         "type":"string",
