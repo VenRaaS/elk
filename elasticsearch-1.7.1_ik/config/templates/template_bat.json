@@ -79,13 +79,13 @@
                     }
                 }
             },
-            "goods":{
-                "_id":{
+            "goods":{  
+                "_id":{  
                     "index":"not_analyzed",
                     "path":"gid"
                 },
                 "properties":{  
-                    "gid":{
+                    "gid":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
@@ -246,6 +246,10 @@
                         "type":"double"
                     },
                     "promo_id":{  
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
+                    "affiliate_id":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
