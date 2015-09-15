@@ -1,16 +1,16 @@
 {  
     "template_bat":{  
         "template":"*_bat",
-        "mappings":{
-            "_default_":{
-                "_all":{
+        "mappings":{  
+            "_default_":{  
+                "_all":{  
                     "enabled":false
                 },
-                "_ttl":{
+                "_ttl":{  
                     "enabled":true,
                     "default":"90d"
                 },
-                "dynamic_templates":[
+                "dynamic_templates":[  
                     {  
                         "str_ik":{  
                             "match":"*_ik",
@@ -44,23 +44,23 @@
                     }
                 ]
             },
-            "category":{
-                "_id":{
+            "category":{  
+                "_id":{  
                     "index":"not_analyzed",
                     "path":"_combo_id"
                 },
-                "properties":{
-					"_combo_id":{
+                "properties":{  
+                    "_combo_id":{  
                         "type":"string",
-						"index":"not_analyzed",						
+                        "index":"not_analyzed"
                     },
-                    "category_name":{
+                    "category_name":{  
                         "type":"string",
-						"index":"analyzed",
-						"analyzer":"ik",                        
-						"term_vector":"with_positions_offsets"
+                        "index":"analyzed",
+                        "analyzer":"ik",
+                        "term_vector":"with_positions_offsets"
                     },
-					"p_category_code":{  
+                    "p_category_code":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
@@ -71,17 +71,17 @@
                     "le":{  
                         "type":"string",
                         "index":"not_analyzed"
-                    },                    
+                    },
                     "update_time":{  
                         "type":"date",
-                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
-            },			
+            },
             "goods":{  
                 "_id":{  
-                    "index":"not_analyzed",                    
+                    "index":"not_analyzed",
                     "path":"gid"
                 },
                 "properties":{  
@@ -96,31 +96,31 @@
                     "goods_name":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",                        
+                        "analyzer":"ik",
                         "term_vector":"with_positions_offsets"
                     },
                     "goods_keyword":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",                        
+                        "analyzer":"ik",
                         "term_vector":"with_positions_offsets"
                     },
                     "goods_brand":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",                        
+                        "analyzer":"ik",
                         "term_vector":"with_positions_offsets"
                     },
                     "goods_describe":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",                        
+                        "analyzer":"ik",
                         "term_vector":"with_positions_offsets"
                     },
                     "goods_spec":{  
                         "type":"string",
                         "index":"analyzed",
-                        "analyzer":"ik",                        
+                        "analyzer":"ik",
                         "term_vector":"with_positions_offsets"
                     },
                     "goods_img_url":{  
@@ -151,26 +151,26 @@
                     },
                     "first_rts_date":{  
                         "type":"date",
-                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     },
                     "update_time":{  
                         "type":"date",
-                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
-            "goodscatecode":{
-                "_id":{
+            "goodscatecode":{  
+                "_id":{  
                     "index":"not_analyzed",
                     "path":"_combo_id"
                 },
-                "properties":{ 
-                    "_combo_id":{
+                "properties":{  
+                    "_combo_id":{  
                         "type":"string",
-                        "index":"not_analyzed",						
-                    },				
+                        "index":"not_analyzed"
+                    },
                     "gid":{  
                         "type":"string",
                         "index":"not_analyzed"
@@ -193,20 +193,20 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
-            "orderlist":{
-                "_id":{
+            "orderlist":{  
+                "_id":{  
                     "index":"not_analyzed",
                     "path":"_combo_id"
                 },
-                "properties":{                      
-					"_combo_id":{
+                "properties":{  
+                    "_combo_id":{  
                         "type":"string",
-						"index":"not_analyzed",						
+                        "index":"not_analyzed"
                     },
                     "uid":{  
                         "type":"string",
@@ -222,7 +222,7 @@
                     },
                     "order_date":{  
                         "type":"date",
-                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"minutes"
                     },
                     "gid":{  
@@ -258,17 +258,17 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
-            "customer":{
-                "_id":{
+            "customer":{  
+                "_id":{  
                     "index":"not_analyzed",
                     "path":"uid"
                 },
-                "properties":{                    
+                "properties":{  
                     "uid":{  
                         "type":"string",
                         "index":"not_analyzed"
@@ -296,13 +296,11 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format": "yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             }
         }
-		
-		
     }
 }
