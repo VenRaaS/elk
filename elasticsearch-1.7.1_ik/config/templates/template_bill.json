@@ -40,15 +40,24 @@
                     }
                 ]
             },
-			
             "api_count":{  
                 "_ttl":{  
                     "enabled":true,
-                    "default":"720d"
+                    "default":"180d"
                 },
                 "properties":{  
+                    "page_type":{  
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
+                    "algo_id":{  
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
                     "count":{  
-                        "type":"long"
+                        "type":"long",
+                        "index":"yes",
+                        "null_value":1
                     },
                     "update_time":{  
                         "type":"date",
@@ -57,7 +66,6 @@
                     }
                 }
             }
-			
         }
     }
 }
