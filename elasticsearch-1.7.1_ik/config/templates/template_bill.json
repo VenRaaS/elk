@@ -56,7 +56,7 @@
                     },
                     "count":{  
                         "type":"long",
-                        "index":"yes",
+                        "index":"not_analyzed",
                         "null_value":1
                     },
                     "update_time":{  
