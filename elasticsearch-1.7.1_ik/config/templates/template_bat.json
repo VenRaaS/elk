@@ -45,8 +45,7 @@
                 ]
             },
             "category":{  
-                "_id":{  
-                    "index":"not_analyzed",
+                "_id":{                      
                     "path":"_combo_id"
                 },
                 "properties":{  
@@ -80,8 +79,7 @@
                 }
             },
             "goods":{  
-                "_id":{  
-                    "index":"not_analyzed",
+                "_id":{                     
                     "path":"gid"
                 },
                 "properties":{  
@@ -162,8 +160,7 @@
                 }
             },
             "goodscatecode":{  
-                "_id":{  
-                    "index":"not_analyzed",
+                "_id":{                    
                     "path":"_combo_id"
                 },
                 "properties":{  
@@ -199,8 +196,7 @@
                 }
             },
             "orderlist":{  
-                "_id":{  
-                    "index":"not_analyzed",
+                "_id":{                    
                     "path":"_combo_id"
                 },
                 "properties":{  
@@ -268,8 +264,7 @@
                 }
             },
             "customer":{  
-                "_id":{  
-                    "index":"not_analyzed",
+                "_id":{                    
                     "path":"uid"
                 },
                 "properties":{  

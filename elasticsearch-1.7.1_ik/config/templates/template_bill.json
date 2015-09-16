@@ -41,7 +41,7 @@
                 ]
             },
 			
-            "api_rec":{  
+            "api_count":{  
                 "_ttl":{  
                     "enabled":true,
                     "default":"720d"
