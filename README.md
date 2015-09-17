@@ -135,6 +135,7 @@ http://localhost:9200/goshopping_bill/api_rec/20150829/_update
   "update_time": "2015-09-02 13:15:10"
 }
 ```
+* [page_type](https://github.com/VenRaaS/venraas-user-guide/wiki/page-tagging#definition-of-page-type)
 
 ##### API to query counting information
 Query all daily count info from 2015-08-29
