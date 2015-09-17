@@ -168,7 +168,7 @@ http://localhost:9200/gohappy_bill/api_count/_search
 }
 ```
 
-* Query the histogram of hourly api request count with the specified page type (Category)
+* Query the histogram of hourly api request count with the specified page type, i.e. Category
 
   ```
 POST
