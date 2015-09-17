@@ -198,6 +198,14 @@ http://localhost:9200/gohappy_bill/api_count/_search
 }
 ```
 
+* Query the overall histogram of hourly api request counting sum
+
+  ``` 
+POST
+http://localhost:9200/*/api_count/_search
+...
+```
+  
 ### Logstash
 TODO ...
 
