@@ -127,7 +127,7 @@ We stores daily recom'd API request counting information under **{cust}_bill/api
 ##### API for counting of recom'd requests
 ```
 POST
-http://localhost:9200/goshopping_bill/api_rec/20150829/_update
+http://localhost:9200/gohappy_bill/api_count
 {
   "page_type": "gop",
   "algo_id": "b01",
