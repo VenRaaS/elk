@@ -138,7 +138,7 @@ http://localhost:9200/gohappy_bill/api_count
 * [page_type](https://github.com/VenRaaS/venraas-user-guide/wiki/page-tagging#definition-of-page-type)
 
 ##### API to query counting information
-Query all daily count info from 2015-08-29
+Query the histogram of hourly api request counting sum
 ```
 POST 
 http://140.96.83.31:9200/gohappy_bill/api_count/_search
@@ -167,6 +167,33 @@ http://140.96.83.31:9200/gohappy_bill/api_count/_search
 }
 ```
 
+Query the histogram of hourly api request counting sum
+```
+POST
+{
+  "size": 0,
+  "query": {
+    "query_string": {
+      "query": "page_type:cap"
+    }
+  },
+  "aggs": {
+    "name_histo": {
+      "date_histogram": {
+        "field": "update_time",
+        "interval": "1h"
+      },
+      "aggs": {
+        "name_cnt": {
+          "sum": {
+            "field": "count"
+          }
+        }
+      }
+    }
+  }
+}
+```
 ### Logstash
 TODO ...
 
