@@ -139,8 +139,31 @@ http://localhost:9200/goshopping_bill/api_rec/20150829/_update
 ##### API to query counting information
 Query all daily count info from 2015-08-29
 ```
-GET 
-http://140.96.83.31:9200/goshopping_bill/api_rec/_search?q=update_time:[2015-08-29 TO *]
+POST 
+http://140.96.83.31:9200/gohappy_bill/api_count/_search
+{
+  "size": 0,
+  "query": {
+    "query_string": {
+      "query": "*"
+    }
+  },
+  "aggs": {
+    "name_histo": {
+      "date_histogram": {
+        "field": "update_time",
+        "interval": "1h"
+      },
+      "aggs": {
+        "name_cnt": {
+          "sum": {
+            "field": "count"
+          }
+        }
+      }
+    }
+  }
+}
 ```
 
 ### Logstash
