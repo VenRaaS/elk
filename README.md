@@ -122,18 +122,17 @@ http://localhost:9200/venraas/com_pkgs
 
 
 #### Counting API requests 
-We stores daily recom'd API request counting information under **{cust}_bill/rec_ap/{yyyMMdd}**.  
+We stores daily recom'd API request counting information under **{cust}_bill/api_count**.  
 
-##### API to increamt the count of recom'd requests
+##### API for counting of recom'd requests
 ```
 POST
 http://localhost:9200/goshopping_bill/api_rec/20150829/_update
 {
-  "script": "ctx._source.count += 1",
-  "upsert": {
-    "count": 1,
-    "update_time": "2015-08-29 10:24:09"
-  }
+  "page_type": "gop",
+  "algo_id": "b01",
+  "count": 1,
+  "update_time": "2015-09-02 13:15:10"
 }
 ```
 
