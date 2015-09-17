@@ -139,7 +139,8 @@ http://localhost:9200/gohappy_bill/api_count
 
 ##### API to query counting information
 * Query the histogram of hourly api request counting sum
-```
+
+  ```
 POST 
 http://localhost:9200/gohappy_bill/api_count/_search
 {
@@ -168,7 +169,8 @@ http://localhost:9200/gohappy_bill/api_count/_search
 ```
 
 * Query the histogram of hourly api request counting sum with the specified page type (Category)
-```
+
+  ```
 POST
 http://localhost:9200/gohappy_bill/api_count/_search
 {
