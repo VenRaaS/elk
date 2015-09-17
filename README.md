@@ -108,7 +108,7 @@ http://localhost:9200/venraas/com_pkgs
         "authList": [
           {
             "authId": 100,
-            "authName": "總和all 總覽overview",
+            "authName": "總和 all 總覽 overview",
             "authEnabled": true,
             "authType": "TYPE_1_REPORT"
           },
@@ -197,6 +197,7 @@ http://localhost:9200/gohappy_bill/api_count/_search
   }
 }
 ```
+
 ### Logstash
 TODO ...
 
