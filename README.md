@@ -41,7 +41,7 @@ The concept of the data structure relationship regarding {index}, {type} and {id
 ##### Overview of indices
 The structure of indices and typies with respect to venraas and customers illustrates with following image.
 
-<img src="https://drive.google.com/uc?id=0B78KhWqVkVmtczFPNlN2Y2JPQW8" width="700">
+<img src="https://drive.google.com/uc?id=0B78KhWqVkVmtZWV1R0R5NDJpVDQ" width="700">
 
 ##### Customer data structure
 
