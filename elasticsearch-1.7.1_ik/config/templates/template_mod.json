@@ -1,6 +1,6 @@
 {  
     "template_model":{  
-        "template":"*_model",
+        "template":"*_mod",
         "mappings":{  
             "_default_":{  
                 "_all":{  
@@ -41,7 +41,7 @@
                 ]
             },
 			
-            "TP":{  
+            "tp":{  
                 "_id":{  
                     "path":"category_code"
                 },
@@ -64,13 +64,13 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
 			
-            "AR":{  
+            "ar":{  
                 "_id":{  
                     "path":"gid"
                 },
@@ -97,13 +97,13 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
 			
-            "Cooc":{  
+            "cooc":{  
                 "_id":{  
                     "path":"gid"
                 },
@@ -134,13 +134,13 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
 			
-            "AR_c2c":{  
+            "ar_c2c":{  
                 "_id":{  
                     "path":"category_code"
                 },
@@ -167,7 +167,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
