@@ -41,13 +41,14 @@ The concept of the data structure relationship regarding {index}, {type} and {id
 ##### Overview of indices
 The structure of indices and typies with respect to venraas and customers illustrates with following image.
 
-<img src="https://drive.google.com/uc?id=0B78KhWqVkVmtZWV1R0R5NDJpVDQ" width="700">
+<img src="https://drive.google.com/uc?id=0B78KhWqVkVmtVDQ3T0l0NnptTnc" width="700">
 
 ##### Customer data structure
 
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
 * **{cust}_bat** - batch data
 * **{cust}_bill** - api calling count for billing
+* **{cust}_mod** - recom'd model
 * **{cust}_oua** - online user alignment
 * **{cust}_opp** - online preference pool
 
@@ -62,6 +63,10 @@ if our customer is titled `goshopping`, then the creation requests of the 4 indi
 * ```
  POST 
  http://localhost:9200/goshopping_bill/
+
+* ```
+ POST 
+ http://localhost:9200/goshopping_mod/
 
 * ```
  POST 
