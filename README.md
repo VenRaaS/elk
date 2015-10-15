@@ -41,7 +41,7 @@ The concept of the data structure relationship regarding {index}, {type} and {id
 ##### Overview of indices
 The structure of indices and typies with respect to venraas and customers illustrates with following image.
 
-<img src="https://drive.google.com/uc?id=0B78KhWqVkVmtVDQ3T0l0NnptTnc" width="700">
+<img src="https://drive.google.com/uc?id=0B78KhWqVkVmtUXBFdU84VEtoRUE" width="700">
 
 ##### Customer data structure
 
@@ -95,36 +95,53 @@ http://localhost:9200/venraas
 sync info of AAA:
 ```
 POST
-http://localhost:9200/venraas/com_pkgs
-{
-  "webServerTime": "2015-08-04 12:11:22",
-  "companies": [
-    {
-      "comId": 1,
-      "comName": "goshopping",
-      "domainName": "www.goshopping.com",
-      "UUID": "xyzxxxx",
-      "package": {
-        "packageId": 68,
-        "packageName": "A suit",
-        "packageEnableed": true,
-        "apiRequestMax": 21000123,
-        "userAccountMax": 11,
-        "authList": [
-          {
-            "authId": 100,
-            "authName": "總和 all 總覽 overview",
-            "authEnabled": true,
-            "authType": "TYPE_1_REPORT"
-          },
-          ...
-        ]
+http://localhost:9200/venraas/action
+{  
+  "updateTime":"2015-10-08 17:26:01",
+  "account":"eric@goshopping.com",
+  "accountId":1,
+  "actionType":"新增公司",
+  "actionContent":{  
+    "companyId":19,
+    "companyName":"goshopping",
+    "codename":"goshopping",
+    "domainName":"www.goshopping.com",
+    "companyEnabled":true,
+    "offlinemodelstatus":true,
+    "token":"5Lc57e8WpD3",
+    "userAdminId":163,
+    "venraasptstatus":true,
+    "packageId":68
+  }
+}
+```
+```
+POST
+http://localhost:9200/venraas/company
+{  
+  "companies":[  
+    {  
+      "companyId":1,
+      "domainName":"www.goshopping.com",
+      "companyName":"goshopping",
+      "companyEnabled":true,
+      "codename":"goshopping",
+      "token":"5Lc57e8WpD3",
+      "offlinemodelstatus":true,
+      "venraasptstatus":true,
+      "package":{  
+        "packageId":69,
+        "packageName":"B套餐",
+        "packageEnabled":true,
+        "apiRequestMax":1000,
+        "userAccountMax":2,
+        "fee":0,
+        "extraImpressionFee":0
       }
     }
   ]
 }
 ```
-
 
 #### Counting API requests 
 We stores daily recom'd API request counting information under **{cust}_bill/api_count**.  
