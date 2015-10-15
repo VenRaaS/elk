@@ -119,6 +119,7 @@ http://localhost:9200/venraas/action
 POST
 http://localhost:9200/venraas/company
 {  
+  "updateTime":"2015-10-08 17:26:01",
   "companies":[  
     {  
       "companyId":1,
