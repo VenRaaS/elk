@@ -6,7 +6,7 @@
   * [Preliminary](#preliminary)
   * [Create indices](#create-indices)
     * [Customer data structure](#customer-data-structure)
-    * [VenRaaS AAA sync](#venraas-aaa-sync)
+    * [VenRaaS AAA sync](#venraas-aaa-authentication-authorization-and-accounting-sync)
   * [Counting API requests](#counting-api-requests)
 * [Logstash](#logstash)
 * [Kibana](#kibana)
