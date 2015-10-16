@@ -38,7 +38,7 @@ The concept of the data structure relationship regarding {index}, {type} and {id
 ![](https://drive.google.com/uc?id=0B78KhWqVkVmtS0djcjU3QWZsYnc)
 
 #### Create indices
-##### Overview of indices
+##### Overview
 The structure of indices and typies with respect to venraas and customers illustrates with following image.
 
 <img src="https://drive.google.com/uc?id=0B78KhWqVkVmtUXBFdU84VEtoRUE" width="700">
