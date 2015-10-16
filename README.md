@@ -84,7 +84,12 @@ For each request, Elasticsearch responds as follows if the index has been create
 ```
 
 ##### VenRaaS AAA sync
-The AAA (authentication, authorization, and accounting) info is available under `http://localhost:9200/venraas/com_pkgs`
+The AAA (authentication, authorization, and accounting) info is available under 
+```
+http://localhost:9200/venraas/action
+http://localhost:9200/venraas/package
+http://localhost:9200/venraas/company
+```
 
 venraas index creation:
 ```
