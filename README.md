@@ -237,7 +237,7 @@ http://localhost:9200/*/api_count/_search
 #### Installation
 1. `cd logstash` to switch working dir
 2. `tar -xvzf logstash-${version}.tar.gz` to unpack package
-3. `rm ~/.since*` to remove sync history
+3. `rm ~/.since*` to reset sync cursor
 4. `./logstash-1.5.4/bin/logstash -f conf/weblog.conf` to instance a logstash for weblog
 
 ### Kibana
