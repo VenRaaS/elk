@@ -235,9 +235,9 @@ http://localhost:9200/*/api_count/_search
   
 ### Logstash
 #### Installation
-# `tar -xvzf logstash-${version}.tar.gz` to unpack package
-# `rm ~/.since*` to remove sync history
-# `./logstash-1.5.4/bin/logstash -f conf/weblog.conf` to instance a logstash for weblog
+* `tar -xvzf logstash-${version}.tar.gz` to unpack package
+* `rm ~/.since*` to remove sync history
+* `./logstash-1.5.4/bin/logstash -f conf/weblog.conf` to instance a logstash for weblog
 
 ### Kibana
 TODO ...
