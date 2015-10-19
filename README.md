@@ -234,7 +234,8 @@ http://localhost:9200/*/api_count/_search
 ```
   
 ### Logstash
-TODO ...
+#### Installation
+`tar -xvzf logstash-${version}.tar.gz`
 
 ### Kibana
 TODO ...
