@@ -45,7 +45,11 @@
 				"enabled" : true, 
 				"default" : "90d"
 			},
-			"properties":{		
+			"properties":{
+				"token":{	
+					"type":"string",
+					"index":"not_analyzed"
+				},
 				"action":{
 					"type":"string",
 					"index":"not_analyzed"
@@ -85,11 +89,15 @@
 					"type":"string",
 					"index":"not_analyzed"
 				},
-				"url":{
+				"uri":{
 					"type":"string",
 					"index": "no"
 				},
 				"referrer":{
+					"type":"string",
+					"index":"no"
+				},
+				"referrer_host":{
 					"type":"string",
 					"index":"not_analyzed"
 				},
