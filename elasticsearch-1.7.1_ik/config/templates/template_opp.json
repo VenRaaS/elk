@@ -46,6 +46,10 @@
 				"default" : "90d"
 			},
 			"properties":{		
+				"action":{
+					"type":"string",
+					"index":"not_analyzed"
+				},
 				"uid":{
 					"type":"string",
 					"index":"not_analyzed"
