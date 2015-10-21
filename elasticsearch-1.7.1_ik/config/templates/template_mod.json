@@ -64,7 +64,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -93,7 +93,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -126,7 +126,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -155,7 +155,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
