@@ -43,13 +43,21 @@
 			
             "tp":{  
                 "_id":{  
-                    "path":"category_code"
+                    "path":"id"
                 },
                 "_ttl":{  
                     "enabled":true,
                     "default":"90d"
                 },
                 "properties":{  
+                    "code_name":{  
+                        "type":"string",
+                        "index":"no"
+                    },
+                    "id":{  
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
                     "category_code":{  
                         "type":"string",
                         "index":"not_analyzed"
@@ -79,6 +87,10 @@
                     "default":"90d"
                 },
                 "properties":{  
+                    "code_name":{  
+                        "type":"string",
+                        "index":"no"
+                    },
                     "gid":{  
                         "type":"string",
                         "index":"not_analyzed"
@@ -108,6 +120,10 @@
                     "default":"90d"
                 },
                 "properties":{  
+                    "code_name":{  
+                        "type":"string",
+                        "index":"no"
+                    },
                     "gid":{  
                         "type":"string",
                         "index":"not_analyzed"
@@ -134,13 +150,21 @@
 			
             "ar_c2c":{  
                 "_id":{  
-                    "path":"category_code"
+                    "path":"id"
                 },
                 "_ttl":{  
                     "enabled":true,
                     "default":"90d"
                 },
                 "properties":{  
+                    "code_name":{  
+                        "type":"string",
+                        "index":"no"
+                    },
+                    "id":{  
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
                     "category_code":{  
                         "type":"string",
                         "index":"not_analyzed"
