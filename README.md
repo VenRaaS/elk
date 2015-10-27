@@ -47,7 +47,7 @@ The structure of indices and typies with respect to venraas and customers illust
 ##### Customer data structure
 
 Each customer (tenant) consists of 4 indices (DB) for different purposes.
-* **{cust}_gocc** - batch data of Goods, Order, Category, GoodsCateCode
+* **{cust}_gocc** - batch data of Goods, Order, Category (and GoodsCateCode), Customer
 * **{cust}_bill** - api calling count for billing
 * **{cust}_mod** - recom'd models
 * **{cust}_oua** - online user alignment
