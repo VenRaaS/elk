@@ -1,6 +1,6 @@
 {  
     "template_bat":{  
-        "template":"*_bat",
+        "template":"*_gocc",
         "mappings":{  
             "_default_":{  
                 "_all":{  
