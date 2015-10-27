@@ -37,7 +37,7 @@ cluster.name: westernwall
 # Node names are generated dynamically on startup, so you're relieved
 # from configuring them manually. You can tie this node to a specific name:
 #
-node.name: "ww_001"
+node.name: "es-node-01"
 
 # Every node can be configured to allow or deny being eligible as the master,
 # and to allow or deny to store the data.
@@ -336,7 +336,7 @@ discovery.zen.ping.multicast.enabled: false
 #    to perform discovery when new nodes (master or data) are started:
 #
 #discovery.zen.ping.unicast.hosts: ["host1", "host2:port"]
-discovery.zen.ping.unicast.hosts: ["ww_001", "ww_002", "ww_003"]
+discovery.zen.ping.unicast.hosts: ["es-node-01", "es-node-02", "es-node-03"]
 
 # EC2 discovery allows to use AWS EC2 API in order to perform discovery.
 #
