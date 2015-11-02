@@ -226,7 +226,7 @@ http://localhost:9200/gohappy_bill/api_count/_search
 ```
 
 * Query the histogram of daily api request count and sum with the specified page type, i.e. Category
-```
+  ```
 POST
 http://localhost:9200/goshoppy_bill/api_count/
 {
