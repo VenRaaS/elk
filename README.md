@@ -225,6 +225,40 @@ http://localhost:9200/gohappy_bill/api_count/_search
 }
 ```
 
+* Query the histogram of daily api request count and sum with the specified page type, i.e. Category
+```
+POST
+http://localhost:9200/goshoppy_bill/api_count/
+{
+  "size": 0,
+  "query": {
+    "filtered": {
+      "query": {
+        "query_string": {
+          "query": "_type:api_count AND update_time:[2015-10-01 TO 2015-10-03]",
+          "analyze_wildcard": true
+        }
+      }
+    }
+  },
+  "aggs": {
+    "2": {
+      "date_histogram": {
+        "field": "update_time",
+        "interval": "1d"
+      },
+      "aggs": {
+        "3": {
+          "sum": {
+            "field": "count"
+          }
+        }
+      }
+    }
+  }
+}
+```
+
 * Query the overall histogram of hourly api request count
 
   ``` 
