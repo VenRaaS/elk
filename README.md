@@ -157,7 +157,7 @@ POST
 http://localhost:9200/gohappy_bill/api_count
 {
   "page_type": "gop",
-  "algo_id": "b01",
+  "fea_id": "b01",
   "count": 1,
   "update_time": "2015-09-02 13:15:10"
 }
