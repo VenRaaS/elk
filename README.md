@@ -25,7 +25,7 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 #### Installation
 1. download and extract from [Github](https://github.com/VenRaaS/elk.git), i.e. click [Download ZIP](https://github.com/VenRaaS/elk/archive/master.zip)
 2. enter [CLI](https://en.wikipedia.org/wiki/Command-line_interface) mode and change working dir to `elasticsearch-1.7.1_ik\`
-3. execute `bin\elasticsearch.bat`, (or `bin/elasticsearch` if linux like OS)
+3. execute `bin\elasticsearch.bat`, (or `bin/elasticsearch` or `bin/elasticsearch -d` if linux like OS)
 4. browse `http://localhost:9200` and check whether the response message looks as below.  
    `{"status" : 200, "name" : "Thing", "cluster_name" : "elasticsearch", ... }`
 5. check `http://localhost:9200/_plugin/head/` for managemnet console [elasticsearch-head](http://mobz.github.io/elasticsearch-head/)
