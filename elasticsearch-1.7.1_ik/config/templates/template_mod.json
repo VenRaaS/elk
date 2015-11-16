@@ -86,7 +86,11 @@
                     "enabled":true,
                     "default":"90d"
                 },
-                "properties":{  
+                "properties":{
+                    "code_name":{
+                        "type":"string",
+                        "index":"no"
+    	            },
                     "gid":{  
                         "type":"string",
                         "index":"not_analyzed"
