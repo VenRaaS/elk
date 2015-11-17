@@ -43,7 +43,7 @@
 			
             "tp":{  
                 "_id":{  
-                    "path":"id"
+                    "path":"category_code"
                 },
                 "_ttl":{  
                     "enabled":true,
@@ -54,15 +54,7 @@
                         "type":"string",
                         "index":"no"
                     },
-                    "id":{  
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
                     "category_code":{  
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "le":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
@@ -121,17 +113,13 @@
                     },
                     "id":{  
                         "type":"string",
-                        "index":"not_analyzed"
+                        "index":"no"
                     },
                     "gid":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
                     "category_code":{  
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "le":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
@@ -144,12 +132,19 @@
             },
 
             "breadcrumb":{  
+                "_id":{  
+                    "path":"id"
+                },
                 "_ttl":{  
                     "enabled":true,
                     "default":"90d"
                 },
                 "properties":{  
                     "code_name":{  
+                        "type":"string",
+                        "index":"no"
+                    },
+                    "id":{  
                         "type":"string",
                         "index":"no"
                     },
@@ -202,7 +197,7 @@
                 }
             },
 			
-            "cooc":{  
+            "cooc_i2i":{  
                 "_id":{  
                     "path":"gid"
                 },
@@ -227,10 +222,6 @@
                         "type":"string",
                         "index":"no"
                     },
-                    "category_codes":{  
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
                     "update_time":{  
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
@@ -238,10 +229,10 @@
                     }
                 }
             },
-			
+
             "ar_c2c":{  
                 "_id":{  
-                    "path":"id"
+                    "path":"category_code"
                 },
                 "_ttl":{  
                     "enabled":true,
@@ -251,10 +242,6 @@
                     "code_name":{  
                         "type":"string",
                         "index":"no"
-                    },
-                    "id":{  
-                        "type":"string",
-                        "index":"not_analyzed"
                     },
                     "category_code":{  
                         "type":"string",
@@ -275,8 +262,8 @@
                     }
                 }
             }
-			
-			
+
+
         }
     }
 }
