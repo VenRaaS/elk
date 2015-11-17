@@ -219,13 +219,13 @@
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "Indicators":{  
+                    "indicators":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "Indicators_raw":{  
+                    "indicators_raw":{  
                         "type":"string",
-                        "index":"not_analyzed"
+                        "index":"no"
                     },
                     "category_codes":{  
                         "type":"string",
