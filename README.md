@@ -25,7 +25,7 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 #### Installation
 1. download and extract from [Github](https://github.com/VenRaaS/elk.git), i.e. click [Download ZIP](https://github.com/VenRaaS/elk/archive/master.zip)
 2. enter [CLI](https://en.wikipedia.org/wiki/Command-line_interface) mode and change working dir to `elasticsearch-1.7.1_ik\`
-3. enlarge JVM heap size (optional, reserves at least half memory to OS)
+3. enlarge [heap size](https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#heap-sizing) to performance (optional, reserves at least half memory to OS)
  - `export ES_HEAP_SIZE=10g`
 4. start elasticsearch instance
  - `bin\elasticsearch.bat` for windows
