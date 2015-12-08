@@ -106,13 +106,13 @@
 				},
 				"insert_min_dt":{
 					"type":"date",
-					"format":"yyyy-MM-dd HH:mm:ss || date_hour_minute_second_millis || dateOptionalTime",
+					"format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
 					"numeric_resolution" : "minutes"
 				},
 				"insert_dt":{
 					"type":"date",
 					"index":"no",
-					"format":"yyyy-MM-dd HH:mm:ss || date_hour_minute_second_millis || dateOptionalTime",
+					"format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
 					"numeric_resolution" : "seconds"
 				}
 			}
