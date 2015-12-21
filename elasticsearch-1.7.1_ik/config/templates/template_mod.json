@@ -197,11 +197,11 @@
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "gids":{  
+                    "consequents":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "gids_raw":{  
+                    "consequents_raw":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
@@ -271,11 +271,11 @@
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "category_codes":{  
+                    "consequents":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "category_codes_raw":{  
+                    "consequents_raw":{  
                         "type":"string",
                         "index":"not_analyzed"
                     },
