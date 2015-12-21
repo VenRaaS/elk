@@ -62,6 +62,10 @@
                         "type":"string",
                         "index":"not_analyzed"
                     },
+                    "params":{
+                        "type":"string",
+                        "index":"analyzed"
+                    },
                     "update_time":{  
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
@@ -89,6 +93,10 @@
                     },
                     "score":{  
                         "type":"double"
+                    },
+                    "params":{
+                        "type":"string",
+                        "index":"analyzed"
                     },
                     "update_time":{  
                         "type":"date",
@@ -123,6 +131,10 @@
                         "type":"string",
                         "index":"not_analyzed"
                     },
+                    "params":{
+                        "type":"string",
+                        "index":"analyzed"
+                    },
                     "update_time":{  
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
@@ -156,6 +168,10 @@
                         "type":"string",
                         "index":"no"
                     },
+                    "params":{
+                        "type":"string",
+                        "index":"analyzed"
+                    },
                     "update_time":{  
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
@@ -164,7 +180,7 @@
                 }
             },
 
-            "ar":{  
+            "ar_i2i":{  
                 "_id":{  
                     "path":"gid"
                 },
@@ -188,6 +204,10 @@
                     "gids_raw":{  
                         "type":"string",
                         "index":"not_analyzed"
+                    },
+                    "params":{
+                        "type":"string",
+                        "index":"analyzed"
                     },
                     "update_time":{  
                         "type":"date",
@@ -222,6 +242,10 @@
                         "type":"string",
                         "index":"no"
                     },
+                    "params":{
+                        "type":"string",
+                        "index":"analyzed"
+                    },
                     "update_time":{  
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
@@ -254,6 +278,10 @@
                     "category_codes_raw":{  
                         "type":"string",
                         "index":"not_analyzed"
+                    },
+                    "params":{
+                        "type":"string",
+                        "index":"analyzed"
                     },
                     "update_time":{  
                         "type":"date",
