@@ -67,8 +67,8 @@
                         "index":"analyzed"
                     },
                     "update_time":{  
-                        "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
+                        "type":"date", 
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -100,7 +100,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -133,7 +133,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -166,7 +166,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -203,7 +203,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -240,7 +240,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
@@ -277,7 +277,7 @@
                     },
                     "update_time":{  
                         "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || dateOptionalTime",
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
