@@ -158,7 +158,7 @@ index:
 
 # Path to directory where to store index data allocated for this node.
 #
-path.data: /media/es-data/data
+#path.data: /media/es-data/data
 #
 # Can optionally include more than one location, causing data to be striped across
 # the locations (a la RAID 0) on a file level, favouring locations with most free
@@ -336,7 +336,7 @@ discovery.zen.ping.multicast.enabled: false
 #    to perform discovery when new nodes (master or data) are started:
 #
 #discovery.zen.ping.unicast.hosts: ["host1", "host2:port"]
-discovery.zen.ping.unicast.hosts: ["es-node-01", "es-node-02", "es-node-03"]
+discovery.zen.ping.unicast.hosts: ["es-node-01", "es-node-02", "es-node-03", "es-node-04", "es-node-05"]
 
 # EC2 discovery allows to use AWS EC2 API in order to perform discovery.
 #
