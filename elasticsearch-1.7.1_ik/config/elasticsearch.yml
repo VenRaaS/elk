@@ -336,7 +336,7 @@ discovery.zen.ping.multicast.enabled: false
 #    to perform discovery when new nodes (master or data) are started:
 #
 #discovery.zen.ping.unicast.hosts: ["host1", "host2:port"]
-discovery.zen.ping.unicast.hosts: ["es-node-01", "es-node-02", "es-node-03", "es-node-04", "es-node-05"]
+discovery.zen.ping.unicast.hosts: ["es-node-01", "es-node-02"]
 
 # EC2 discovery allows to use AWS EC2 API in order to perform discovery.
 #
