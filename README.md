@@ -27,12 +27,15 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 2. enter [CLI](https://en.wikipedia.org/wiki/Command-line_interface) mode and change working dir to `elasticsearch-1.7.1_ik\`
 3. enlarge [heap size](https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#heap-sizing) to performance (optional, reserves at least half memory to OS)
  - `export ES_HEAP_SIZE=10g`
-4. start elasticsearch instance
+4. enable [mlockall](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html#setup-configuration-memory)
+ - `ulimit -l unlimited` as `root`
+ - enable `bootstrap.mlockall: true` in `config/elasticsearch.yml`
+5. start elasticsearch instance
  - `bin\elasticsearch.bat` for windows
  - or `bin/elasticsearch` (`bin/elasticsearch -d` demon mode) if linux like OS
-5. browse `http://localhost:9200` and check whether the response message looks as below.  
+6. browse `http://localhost:9200` and check whether the response message looks as below.  
    `{"status" : 200, "name" : "Thing", "cluster_name" : "elasticsearch", ... }`
-6. check `http://localhost:9200/_plugin/head/` for managemnet console [elasticsearch-head](http://mobz.github.io/elasticsearch-head/)
+7. check `http://localhost:9200/_plugin/head/` for managemnet console [elasticsearch-head](http://mobz.github.io/elasticsearch-head/)
 
 For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
 
