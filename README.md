@@ -296,6 +296,7 @@ http://localhost:9200/*/api_count/_search
 4. (optional, package updated)  
    `./logstash-1.5.4/bin/plugin update logstash-input-lumberjack` update lumberjack plugin.(Ref: elk/wiki/Logstash-Configuration-for-Lumberjack-Input) 
 5. `./logstash-1.5.4/bin/logstash -f conf/weblog.conf` to instance a logstash for weblog
+ * `nohup ./logstash-1.5.4/bin/logstash -f conf/weblog.conf > /dev/null 2>&1 &` run in backgroud and nohup
 
 ### Kibana
 TODO ...
