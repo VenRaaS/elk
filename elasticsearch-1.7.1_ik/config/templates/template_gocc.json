@@ -338,7 +338,7 @@
                         "index":"not_analyzed"
                     },
                     "sort":{
-                        "type":"double",
+                        "type":"double"
                     },
                     "update_time":{
                         "type":"date",
