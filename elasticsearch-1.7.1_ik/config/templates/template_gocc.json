@@ -346,6 +346,23 @@
                         "numeric_resolution":"hours"
                     }
                 }
+            },
+            "group_feat_rank":{
+                "_ttl":{  
+                    "enabled":true,
+                    "default":"90d"
+                },
+                "properties":{
+                    "rank":{
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
+                    "update_time":{
+                        "type":"date",
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
+                        "numeric_resolution":"hours"
+                    }
+                }
             }
 
 
