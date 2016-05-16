@@ -1,3 +1,5 @@
+PUT http://$HOSTNAME:9200/_template/template_gocc/
+
 {  
     "template":"*_gocc",
     "mappings":{  
