@@ -207,7 +207,7 @@ PUT http://$HOSTNAME:9200/_template/template_gocc/
                     "type":"double"
                 },
                 "qty":{  
-                    "type":"integer"
+                    "type":"double"
                 },
                 "final_amt":{  
                     "type":"double"
