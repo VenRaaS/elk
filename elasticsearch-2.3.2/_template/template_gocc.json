@@ -59,7 +59,7 @@ PUT http://$HOSTNAME:9200/_template/template_gocc/
                 },
                 "update_time":{  
                     "type":"date",
-                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                     "numeric_resolution":"hours"
                 }
             }
@@ -127,12 +127,12 @@ PUT http://$HOSTNAME:9200/_template/template_gocc/
                 },
                 "first_rts_date":{  
                     "type":"date",
-                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                     "numeric_resolution":"hours"
                 },
                 "update_time":{  
                     "type":"date",
-                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                     "numeric_resolution":"hours"
                 }
             }
@@ -156,8 +156,7 @@ PUT http://$HOSTNAME:9200/_template/template_gocc/
                     "index":"not_analyzed"
                 },
                 "sort":{  
-                    "type":"string",
-                    "index":"not_analyzed"
+                    "type":"double"
                 },
                 "func_type":{  
                     "type":"string",
@@ -165,7 +164,7 @@ PUT http://$HOSTNAME:9200/_template/template_gocc/
                 },
                 "update_time":{  
                     "type":"date",
-                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                     "numeric_resolution":"hours"
                 }
             }
@@ -190,7 +189,7 @@ PUT http://$HOSTNAME:9200/_template/template_gocc/
                 },
                 "order_date":{  
                     "type":"date",
-                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                     "numeric_resolution":"minutes"
                 },
                 "gid":{  
@@ -208,7 +207,7 @@ PUT http://$HOSTNAME:9200/_template/template_gocc/
                     "type":"double"
                 },
                 "qty":{  
-                    "type":"integer"
+                    "type":"double"
                 },
                 "final_amt":{  
                     "type":"double"
@@ -230,7 +229,7 @@ PUT http://$HOSTNAME:9200/_template/template_gocc/
                 },
                 "update_time":{  
                     "type":"date",
-                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                     "numeric_resolution":"hours"
                 }
             }
@@ -264,7 +263,7 @@ PUT http://$HOSTNAME:9200/_template/template_gocc/
                 },
                 "update_time":{  
                     "type":"date",
-                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                     "numeric_resolution":"hours"
                 }
             }
