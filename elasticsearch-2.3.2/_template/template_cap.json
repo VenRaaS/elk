@@ -61,6 +61,10 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                     "type":"string",
                     "index":"not_analyzed"
                 },
+                "goods_name":{  
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
                 "sale_price":{  
                     "type":"double"
                 },
