@@ -57,6 +57,12 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                     "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
                     "numeric_resolution":"minutes"
                 },
+                "order_hour":{
+                    "type":"integer"
+                },
+                "order_dayofweek":{
+                    "type":"integer"
+                },
                 "gid":{  
                     "type":"string",
                     "index":"not_analyzed"
@@ -65,19 +71,22 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                     "type":"string",
                     "index":"not_analyzed"
                 },
-                "sale_price":{  
+                "sale_price":{
                     "type":"double"
                 },
-                "final_price":{  
+                "final_price":{
                     "type":"double"
                 },
-                "qty":{  
+                "qty":{ 
                     "type":"integer"
                 },
-                "final_amt":{  
+                "final_amt":{
                     "type":"double"
                 },
-                "tags":{  
+                "order_sum":{
+                    "type":"double"
+                },
+                "tags":{ 
                     "type":"string",
                     "index":"not_analyzed"
                 },
