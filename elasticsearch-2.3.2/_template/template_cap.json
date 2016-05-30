@@ -34,7 +34,7 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                 }
             ]
         },
-        "orderlist":{  
+        "order":{  
             "properties":{  
                 "_combo_id":{  
                     "type":"string",
@@ -90,10 +90,10 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                     "type":"string",
                     "index":"not_analyzed"
                 },
-                "age":{  
+                "age":{
                     "type":"double"
                 },
-                "gender":{  
+                "gender":{
                     "type":"string",
                     "index":"not_analyzed"
                 }
