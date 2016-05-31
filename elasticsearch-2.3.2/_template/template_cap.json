@@ -96,6 +96,9 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                 "gender":{
                     "type":"string",
                     "index":"not_analyzed"
+                },
+                "uabuy":{
+                    "type":"string"
                 }
 
             }
