@@ -181,7 +181,7 @@
                         "index":"not_analyzed"
                     },
                     "sort":{  
-                        "type":"double",
+                        "type":"double"
                     },
                     "func_type":{  
                         "type":"string",
