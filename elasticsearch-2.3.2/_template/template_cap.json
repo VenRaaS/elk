@@ -93,7 +93,7 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                 "cnt_7d":{
                     "type":"integer"
                 },
-                "cnt_7d":{
+                "cnt_30d":{
                     "type":"integer"
                 },
                 "also_buy":{
