@@ -36,10 +36,6 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
         },
         "order":{  
             "properties":{  
-                "_combo_id":{  
-                    "type":"string",
-                    "index":"not_analyzed"
-                },
                 "uid":{  
                     "type":"string",
                     "index":"not_analyzed"
@@ -74,9 +70,6 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                 "sale_price":{
                     "type":"double"
                 },
-                "final_price":{
-                    "type":"double"
-                },
                 "qty":{ 
                     "type":"integer"
                 },
@@ -97,8 +90,21 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                     "type":"string",
                     "index":"not_analyzed"
                 },
-                "uabuy":{
+                "cnt_7d":{
+                    "type":"integer"
+                },
+                "cnt_7d":{
+                    "type":"integer"
+                },
+                "also_buy":{
                     "type":"string"
+                },
+                "also_view":{
+                    "type":"string"
+                },
+                "img_url":{
+                    "type":"string",
+                    "index":"not_analyzed"
                 }
 
             }
