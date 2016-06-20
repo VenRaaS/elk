@@ -90,11 +90,11 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                     "type":"string",
                     "index":"not_analyzed"
                 },
-                "cnt_7d":{
-                    "type":"integer"
+                "avg_sales_7d":{
+                    "type":"double"
                 },
-                "cnt_30d":{
-                    "type":"integer"
+                "avg_sales_30d":{
+                    "type":"double"
                 },
                 "also_buy":{
                     "type":"string"
@@ -102,6 +102,9 @@ PUT http://$HOSTNAME:9200/_template/template_cap/
                 "also_view":{
                     "type":"string"
                 },
+                "category_codes":{
+                    "type":"string"
+                }
                 "img_url":{
                     "type":"string",
                     "index":"not_analyzed"
