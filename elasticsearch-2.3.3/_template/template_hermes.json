@@ -72,6 +72,14 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
                     "type":"string",
                     "index":"not_analyzed"
                 },
+                "keys2recomder":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "output_params":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
                 "update_dt":{
                     "type":"date",
                     "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime"
