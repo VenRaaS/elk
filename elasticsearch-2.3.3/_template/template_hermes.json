@@ -49,6 +49,7 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
         },
 
 	"param2recomder":{
+            "properties":{  
         	"rec_type":{
                     "type":"string",
                     "index":"not_analyzed"
@@ -73,17 +74,16 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
                     "index":"not_analyzed"
                 },
                 "keys2recomder":{
-                    "type":"string",
-                    "index":"not_analyzed"
+                    "type":"string"
                 },
                 "output_params":{
-                    "type":"string",
-                    "index":"not_analyzed"
+                    "type":"string"
                 },
                 "update_dt":{
                     "type":"date",
                     "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime"
                 }
+            }
         }
     }
 }
