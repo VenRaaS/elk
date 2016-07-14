@@ -45,7 +45,11 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
         },
 
 	"param2recomder":{
-            "properties":{  
+            "properties":{
+            	"rec_pos":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
         	"rec_type":{
                     "type":"string",
                     "index":"not_analyzed"
