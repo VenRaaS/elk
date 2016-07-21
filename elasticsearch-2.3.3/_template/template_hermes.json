@@ -33,7 +33,7 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
 
         "conf":{  
             "properties":{  
-                "duration_reset_routing":{
+                "routing_reset_interval":{
                     "type":"string",
                     "index":"not_analyzed"
                 },
