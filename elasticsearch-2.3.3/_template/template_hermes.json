@@ -82,6 +82,9 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
                 "output_params":{
                     "type":"string"
                 },
+                "availability":{
+                    "type":"integer"
+                },
                 "update_dt":{
                     "type":"date",
                     "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime"
