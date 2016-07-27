@@ -12,7 +12,7 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
                     "str_default":{  
                         "match":"*_s",
                         "match_mapping_type":"string",
-                        "mapping":{  
+                        "mapping":{
                             "type":"string",
                             "index":"analyzed"
                         }
@@ -31,8 +31,11 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
             ]
         },
 
-        "conf":{  
-            "properties":{  
+        "conf":{
+            "properties":{
+            	"traffic_pct_normal":{
+                    "type":"double"
+                },
                 "routing_reset_interval":{
                     "type":"string",
                     "index":"not_analyzed"
