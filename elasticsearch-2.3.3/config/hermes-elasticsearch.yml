@@ -85,7 +85,7 @@ cloud:
 discovery:
       type: gce
       gce:
-          tags: es        # filter by GCE tag
+          tags: hermes        # filter by GCE tag
 # Pass an initial list of hosts to perform discovery when new node is started:
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
