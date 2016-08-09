@@ -80,10 +80,10 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
                     "type":"string",
                     "index":"not_analyzed"
                 },
-                "keys2recomder":{
+                "in_keys2recomder":{
                     "type":"string"
                 },
-                "output_params":{
+                "out_aux_params":{
                     "type":"string"
                 },
                 "availability":{
