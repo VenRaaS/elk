@@ -9,7 +9,7 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
             },
             "_ttl":{  
                 "enabled":true,
-                "default":"360d"
+                "default":"365d"
             },
             "dynamic_templates":[  
                 {  
@@ -99,7 +99,7 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
         "jumper": {
             "_ttl": {
                 "enabled": true,
-                "default": "1m"
+                "default": "30m"
             },
             "properties":{
                 "uid":{
