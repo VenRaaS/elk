@@ -40,7 +40,9 @@ cluster.name: es-ca-cluster
 # for more information.
 #
 # Set the number of replicas (additional copies) of an index (1 by default):
-# index.number_of_replicas: 1
+index.number_of_replicas: 10
+
+index.number_of_shards: 1
 # ----------------------------------- Paths ------------------------------------
 #
 # Path to directory where to store the data (separate multiple locations by comma):
