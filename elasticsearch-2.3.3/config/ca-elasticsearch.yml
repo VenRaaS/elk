@@ -39,10 +39,16 @@ cluster.name: es-ca-cluster
 # <http://elasticsearch.org/guide/en/elasticsearch/reference/current/indices-create-index.html>
 # for more information.
 #
-# Set the number of replicas (additional copies) of an index (1 by default):
-index.number_of_replicas: 10
-
+# reduce network communication cost during query.
 index.number_of_shards: 1
+
+# Set the number of replicas (additional copies) of an index (1 by default):
+index.number_of_replicas: 5
+
+# inject all item data to a node at once, and then, lunch instance group to sync remains automatically.
+# See https://www.elastic.co/guide/en/elasticsearch/reference/current/docs-index_.html#index-consistency
+action.write_consistency: one
+
 # ----------------------------------- Paths ------------------------------------
 #
 # Path to directory where to store the data (separate multiple locations by comma):
