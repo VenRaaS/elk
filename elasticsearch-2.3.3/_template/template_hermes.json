@@ -40,6 +40,10 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
             	"traffic_pct_normal":{
                     "type":"double"
                 },
+                "http_forward_headers": {
+                    "type": "string",
+                    "index": "not_analyzed"
+                },
                 "routing_reset_interval":{
                     "type":"string",
                     "index":"not_analyzed"
