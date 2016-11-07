@@ -7,9 +7,8 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
             "_all":{  
                 "enabled":false
             },
-            "_ttl":{  
-                "enabled":true,
-                "default":"365d"
+            "_ttl":{
+                "enabled":false
             },
             "dynamic_templates":[  
                 {  
