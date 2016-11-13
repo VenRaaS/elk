@@ -127,7 +127,7 @@ discovery:
 # action.destructive_requires_name: true
 #
 # ---------------------------------- Script -----------------------------------
-cript.inline: true
+script.inline: true
 script.indexed: true
 
 
