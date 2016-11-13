@@ -125,3 +125,9 @@ discovery:
 # Require explicit names when deleting indices:
 #
 # action.destructive_requires_name: true
+#
+# ---------------------------------- Script -----------------------------------
+cript.inline: true
+script.indexed: true
+
+
