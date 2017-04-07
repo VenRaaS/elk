@@ -284,4 +284,4 @@ POST http://localhost:9200/*/api_count/_search
  * `nohup ./logstash-1.5.4/bin/logstash -f conf/weblog.conf > /dev/null 2>&1 &` run in backgroud and nohup
 
 #### reference
-* [Breaking changes 2.x => 5.x](https://www.elastic.co/guide/en/logstash/5.x/breaking-changes.html]
+* [Breaking changes 2.x => 5.x](https://www.elastic.co/guide/en/logstash/5.x/breaking-changes.html)
