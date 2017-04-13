@@ -64,25 +64,15 @@ An index creation can be performed using a **restful api** request.
 For example, 
 if our customer is titled `goshopping`, then the creation requests of the 4 indices look like follows.
 
-* ```
- POST 
- http://localhost:9200/goshopping_gocc/
+* `POST http://localhost:9200/goshopping_gocc/`
 
-* ```
- POST 
- http://localhost:9200/goshopping_bill/
+* `POST http://localhost:9200/goshopping_bill/`
 
-* ```
- POST 
- http://localhost:9200/goshopping_mod/
+* `POST http://localhost:9200/goshopping_mod/`
 
-* ```
- POST 
- http://localhost:9200/goshopping_oua/
+* `POST http://localhost:9200/goshopping_oua/`
 
-* ```
- POST 
- http://localhost:9200/goshopping_opp/
+* `POST http://localhost:9200/goshopping_opp/`
 
 For each request, Elasticsearch responds as follows if the index has been created successfully.
 ```
@@ -173,8 +163,7 @@ http://localhost:9200/gohappy_bill/api_count
 
 ##### API to query counting information
 * Query the histogram of hourly api request count
-
-  ```
+```
 POST 
 http://localhost:9200/gohappy_bill/api_count/_search
 {
@@ -203,8 +192,7 @@ http://localhost:9200/gohappy_bill/api_count/_search
 ```
 
 * Query the histogram of hourly api request count with the specified page type, i.e. Category
-
-  ```
+```
 POST
 http://localhost:9200/gohappy_bill/api_count/_search
 {
@@ -233,7 +221,7 @@ http://localhost:9200/gohappy_bill/api_count/_search
 ```
 
 * Query the histogram grouped by $index and $page_type for daily api request count within a specific duration, i.e. Category
-  ```
+```
 POST
 http://localhost:9200/*_bill/api_count/
 {
@@ -281,11 +269,8 @@ http://localhost:9200/*_bill/api_count/
 ```
 
 * Query the overall histogram of hourly api request count
-
-  ``` 
-POST
-http://localhost:9200/*/api_count/_search
-...
+``` 
+POST http://localhost:9200/*/api_count/_search
 ```
   
 ### Logstash
@@ -298,5 +283,5 @@ http://localhost:9200/*/api_count/_search
 5. `./logstash-1.5.4/bin/logstash -f conf/weblog.conf` to instance a logstash for weblog
  * `nohup ./logstash-1.5.4/bin/logstash -f conf/weblog.conf > /dev/null 2>&1 &` run in backgroud and nohup
 
-### Kibana
-TODO ...
+#### Reference
+* [Breaking changes 2.x => 5.x](https://www.elastic.co/guide/en/logstash/5.x/breaking-changes.html)
