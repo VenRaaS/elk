@@ -31,8 +31,8 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
    - `ulimit -l unlimited` as `root`
    - enable `bootstrap.mlockall: true` in `config/elasticsearch.yml`
 5. start elasticsearch instance
- - `bin\elasticsearch.bat` for windows
- - or `bin/elasticsearch` (`bin/elasticsearch -d` demon mode) if linux like OS
+   - `bin\elasticsearch.bat` for windows
+   - or `bin/elasticsearch` (`bin/elasticsearch -d` demon mode) if linux like OS
 6. browse `http://localhost:9200` and check whether the response message looks as below.  
    `{"status" : 200, "name" : "Thing", "cluster_name" : "elasticsearch", ... }`
 7. check `http://localhost:9200/_plugin/head/` for managemnet console [elasticsearch-head](http://mobz.github.io/elasticsearch-head/)
