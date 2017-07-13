@@ -26,10 +26,10 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 1. download and extract from [Github](https://github.com/VenRaaS/elk.git), i.e. click [Download ZIP](https://github.com/VenRaaS/elk/archive/master.zip)
 2. enter [CLI](https://en.wikipedia.org/wiki/Command-line_interface) mode and change working dir to `elasticsearch-1.7.1_ik\`
 3. enlarge [heap size](https://www.elastic.co/guide/en/elasticsearch/guide/current/heap-sizing.html#heap-sizing) to performance (optional, reserves at least half memory to OS)
- - `export ES_HEAP_SIZE=10g`
+   - `export ES_HEAP_SIZE=10g`
 4. enable [mlockall](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup-configuration.html#setup-configuration-memory)
- - `ulimit -l unlimited` as `root`
- - enable `bootstrap.mlockall: true` in `config/elasticsearch.yml`
+   - `ulimit -l unlimited` as `root`
+   - enable `bootstrap.mlockall: true` in `config/elasticsearch.yml`
 5. start elasticsearch instance
  - `bin\elasticsearch.bat` for windows
  - or `bin/elasticsearch` (`bin/elasticsearch -d` demon mode) if linux like OS
