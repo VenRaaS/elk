@@ -1,38 +1,38 @@
-{  
-    "template_model":{  
+{
+    "template_model":{
         "template":"*_mod",
-        "mappings":{  
-            "_default_":{  
-                "_all":{  
+        "mappings":{
+            "_default_":{
+                "_all":{
                     "enabled":false
                 },
-                "dynamic_templates":[  
-                    {  
-                        "str_ik":{  
+                "dynamic_templates":[
+                    {
+                        "str_ik":{
                             "match":"*_ik",
                             "match_mapping_type":"string",
-                            "mapping":{  
+                            "mapping":{
                                 "type":"string",
                                 "index":"analyzed",
                                 "analyzer":"ik"
                             }
                         }
                     },
-                    {  
-                        "str_default":{  
+                    {
+                        "str_default":{
                             "match":"*_s",
                             "match_mapping_type":"string",
-                            "mapping":{  
+                            "mapping":{
                                 "type":"string",
                                 "index":"analyzed"
                             }
                         }
                     },
-                    {  
-                        "str_na":{  
+                    {
+                        "str_na":{
                             "match":"*",
                             "match_mapping_type":"string",
-                            "mapping":{  
+                            "mapping":{
                                 "type":"string",
                                 "index":"not_analyzed"
                             }
@@ -40,45 +40,11 @@
                     }
                 ]
             },
-			
-            "tp":{  
-                "_id":{  
+            "tp":{
+                "_id":{
                     "path":"category_code"
                 },
-                "_ttl":{  
-                    "enabled":true,
-                    "default":"90d"
-                },
-                "properties":{  
-                    "code_name":{  
-                        "type":"string",
-                        "index":"no"
-                    },
-                    "category_code":{  
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "gids":{  
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "params":{
-                        "type":"string",
-                        "index":"analyzed"
-                    },
-                    "update_time":{  
-                        "type":"date", 
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
-                        "numeric_resolution":"hours"
-                    }
-                }
-            },
-			
-            "vig":{  
-                "_id":{  
-                    "path":"gid"
-                },
-                "_ttl":{  
+                "_ttl":{
                     "enabled":true,
                     "default":"90d"
                 },
@@ -86,59 +52,89 @@
                     "code_name":{
                         "type":"string",
                         "index":"no"
-    	            },
-                    "gid":{  
+                    },
+                    "category_code":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "score":{  
+                    "gids":{
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
+                    "params":{
+                        "type":"string",
+                        "index":"analyzed"
+                    },
+                    "update_time":{
+                        "type":"date",
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
+                        "numeric_resolution":"hours"
+                    }
+                }
+            },
+            "vig":{
+                "_id":{
+                    "path":"gid"
+                },
+                "_ttl":{
+                    "enabled":true,
+                    "default":"90d"
+                },
+                "properties":{
+                    "code_name":{
+                        "type":"string",
+                        "index":"no"
+                    },
+                    "gid":{
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
+                    "score":{
                         "type":"double"
                     },
                     "params":{
                         "type":"string",
                         "index":"analyzed"
                     },
-                    "update_time":{  
+                    "update_time":{
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
-
-            "goods_category_flatten":{  
-                "_id":{  
+            "goods_category_flatten":{
+                "_id":{
                     "path":"id"
                 },
-                "_ttl":{  
+                "_ttl":{
                     "enabled":true,
                     "default":"90d"
                 },
-                "properties":{  
-                    "code_name":{  
+                "properties":{
+                    "code_name":{
                         "type":"string",
                         "index":"no"
                     },
-                    "id":{  
+                    "id":{
                         "type":"string",
                         "index":"no"
                     },
-                    "gid":{  
+                    "gid":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "category_code":{  
+                    "category_code":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "update_time":{  
+                    "update_time":{
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
-
             "category_flatten":{
                 "_id":{
                     "path":"id"
@@ -175,62 +171,60 @@
                     }
                 }
             },
-
-            "breadcrumb":{  
-                "_id":{  
+            "breadcrumb":{
+                "_id":{
                     "path":"id"
                 },
-                "_ttl":{  
+                "_ttl":{
                     "enabled":true,
                     "default":"90d"
                 },
-                "properties":{  
-                    "code_name":{  
+                "properties":{
+                    "code_name":{
                         "type":"string",
                         "index":"no"
                     },
-                    "id":{  
+                    "id":{
                         "type":"string",
                         "index":"no"
                     },
-                    "gid":{  
+                    "gid":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "breadcrumb":{  
+                    "breadcrumb":{
                         "type":"string",
                         "index":"no"
                     },
-                    "update_time":{  
+                    "update_time":{
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
-
-            "ar_i2i":{  
-                "_id":{  
+            "ar_i2i":{
+                "_id":{
                     "path":"gid"
                 },
-                "_ttl":{  
+                "_ttl":{
                     "enabled":true,
                     "default":"90d"
                 },
-                "properties":{  
-                    "code_name":{  
+                "properties":{
+                    "code_name":{
                         "type":"string",
                         "index":"no"
                     },
-                    "gid":{  
+                    "gid":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "consequents":{  
+                    "consequents":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "consequents_raw":{  
+                    "consequents_raw":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
@@ -238,36 +232,35 @@
                         "type":"string",
                         "index":"analyzed"
                     },
-                    "update_time":{  
+                    "update_time":{
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
-			
-            "cooc_i2i":{  
-                "_id":{  
+            "cooc_i2i":{
+                "_id":{
                     "path":"gid"
                 },
-                "_ttl":{  
+                "_ttl":{
                     "enabled":true,
                     "default":"90d"
                 },
-                "properties":{  
-                    "code_name":{  
+                "properties":{
+                    "code_name":{
                         "type":"string",
                         "index":"no"
                     },
-                    "gid":{  
+                    "gid":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "indicators":{  
+                    "indicators":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "indicators_raw":{  
+                    "indicators_raw":{
                         "type":"string",
                         "index":"no"
                     },
@@ -275,36 +268,35 @@
                         "type":"string",
                         "index":"analyzed"
                     },
-                    "update_time":{  
+                    "update_time":{
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             },
-
-            "ar_c2c":{  
-                "_id":{  
+            "ar_c2c":{
+                "_id":{
                     "path":"category_code"
                 },
-                "_ttl":{  
+                "_ttl":{
                     "enabled":true,
                     "default":"90d"
                 },
-                "properties":{  
-                    "code_name":{  
+                "properties":{
+                    "code_name":{
                         "type":"string",
                         "index":"no"
                     },
-                    "category_code":{  
+                    "category_code":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "consequents":{  
+                    "consequents":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
-                    "consequents_raw":{  
+                    "consequents_raw":{
                         "type":"string",
                         "index":"not_analyzed"
                     },
@@ -312,15 +304,48 @@
                         "type":"string",
                         "index":"analyzed"
                     },
-                    "update_time":{  
+                    "update_time":{
+                        "type":"date",
+                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
+                        "numeric_resolution":"hours"
+                    }
+                }
+            },
+            "tp_goods":{
+                "_all":{
+                    "enabled":false
+                },
+                "_id":{
+                    "path":"gid"
+                },
+                "_ttl":{
+                    "enabled":true,
+                    "default":7776000000
+                },
+                "properties":{
+                    "code_name":{
+                        "type":"string",
+                        "index":"no"
+                    },
+                    "gid":{
+                        "type":"string",
+                        "index":"not_analyzed"
+                    },
+                    "click_num":{
+                        "type":"string",
+                        "index":"no"
+                    },
+                    "order_num":{
+                        "type":"string",
+                        "index":"no"
+                    },
+                    "update_time":{
                         "type":"date",
                         "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                         "numeric_resolution":"hours"
                     }
                 }
             }
-
-
         }
     }
 }
