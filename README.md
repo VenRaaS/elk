@@ -18,7 +18,7 @@ This project applies [ELS](https://www.elastic.co/webinars/introduction-elk-stac
 All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www.elastic.co/) are placed here.
 
 ### Prerequisite
-* Java runtime (JRE) 1.7+
+* Java runtime (JRE) 1.8+
 
 ### Elasticsearch
 
