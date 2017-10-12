@@ -14,7 +14,7 @@
 
 ### Introduction
 
-This project applies [ELS](https://www.elastic.co/webinars/introduction-elk-stack) to make a nearline tier of the recommention system. 
+This project applies [ELS](https://www.elastic.co/webinars/introduction-elk-stack) to make a nearline tier of the recommention system.   
 All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www.elastic.co/) are placed here.
 
 ### Prerequisite
