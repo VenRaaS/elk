@@ -21,6 +21,21 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 * Java runtime (JRE) 1.8+
 
 ### Elasticsearch
+#### System Configuration
+* [/etc/security/limits.conf](https://www.elastic.co/guide/en/elasticsearch/reference/current/setting-system-settings.html#limits.conf)
+  * set the maximum number of open files for the elasticsearch user, e.g. elk
+  * grant elasticsearch user permission to lock memory 
+```
+# /etc/security/limits.conf
+elk    -    nofile       65536                                  
+elk    -    memlock      unlimited
+```
+* [mmapfs](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
+  * increase the limits of mmap count  
+```
+# /etc/sysctl.conf
+vm.max_map_count=262144
+```
 
 #### Installation
 1. download and extract from [Github](https://github.com/VenRaaS/elk.git), i.e. click [Download ZIP](https://github.com/VenRaaS/elk/archive/master.zip)
