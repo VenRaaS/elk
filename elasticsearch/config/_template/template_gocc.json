@@ -128,7 +128,7 @@ PUT _template/template_gocc
           "type": "date",
           "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
         },
-        "update_time": {
+        "update_dt": {
           "type": "date",
           "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
         }
@@ -152,7 +152,7 @@ PUT _template/template_gocc
         "func_type": {
           "type": "keyword"
         },
-        "update_time": {
+        "update_dt": {
           "type": "date",
           "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
         }
@@ -207,7 +207,7 @@ PUT _template/template_gocc
         "delivery_type": {
           "type": "keyword"
         },
-        "update_time": {
+        "update_dt": {
           "type": "date",
           "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
         }
@@ -234,7 +234,7 @@ PUT _template/template_gocc
         "area_2": {
           "type": "keyword"
         },
-        "update_time": {
+        "update_dt": {
           "type": "date",
           "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
         }
@@ -248,7 +248,7 @@ PUT _template/template_gocc
         "category_code": {
           "type": "keyword"
         },
-        "update_time": {
+        "update_dt": {
           "type": "date",
           "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
         }
@@ -266,7 +266,7 @@ PUT _template/template_gocc
           "type": "scaled_float",
           "scaling_factor": 10
         },
-        "update_time": {
+        "update_dt": {
           "type": "date",
           "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
         }
@@ -277,7 +277,7 @@ PUT _template/template_gocc
         "rank": {
           "type": "keyword"
         },
-        "update_time": {
+        "update_dt": {
           "type": "date",
           "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
         }
@@ -291,7 +291,7 @@ PUT _template/template_gocc
         "gid": {
           "type": "keyword"
         },
-        "update_time": {
+        "update_dt": {
           "type": "date",
           "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
         }
