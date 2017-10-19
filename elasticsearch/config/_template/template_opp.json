@@ -43,40 +43,40 @@ PUT _template/template_opp
     "OnlinePref": {
       "properties":{
         "action":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "uid":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "ven_guid":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "ven_session":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "cc_guid":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "cc_session":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "device":{
-          "type":"keyword",
+          "type":"keyword"
         },    
         "gid":{
-          "type":"keyword",
+          "type":"keyword"
         },            
         "category_code":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "category_code_le":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "client_ip":{
           "type":"ip"
         },
         "page_type":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "uri":{
           "type":"keyword",
@@ -87,7 +87,7 @@ PUT _template/template_opp
           "index":false
         },
         "referrer_host":{
-          "type":"keyword",
+          "type":"keyword"
         },
         "geo_location":{
           "type" : "geo_point"
