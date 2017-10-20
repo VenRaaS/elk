@@ -103,7 +103,7 @@ PUT _template/template_gocc
         },
         "goods_img_url": {
           "type": "keyword",
-		  "index": false
+          "index": false
         },
         "availability": {
           "type": "integer"
@@ -275,7 +275,8 @@ PUT _template/template_gocc
     "group_feat_rank": {
       "properties": {
         "rank": {
-          "type": "keyword"
+          "type": "keyword",
+          "index": false
         },
         "update_dt": {
           "type": "date",
