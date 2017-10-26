@@ -1,4 +1,4 @@
-PUT _template/template_opp
+PUT _template/template_oua
 
 {
   "template" : "*_oua_*",
