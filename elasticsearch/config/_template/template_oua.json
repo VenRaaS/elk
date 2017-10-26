@@ -1,0 +1,62 @@
+PUT _template/template_opp
+
+{
+  "template" : "*_oua_*",
+  "mappings" : {
+    "_default_" : {
+      "_all" : {
+          "enabled" : false
+      },
+      "dynamic": false,
+      "dynamic_templates": [
+        {
+          "str_ik": {
+            "match": "*_ik",
+            "match_mapping_type": "text",
+            "mapping": {
+              "type": "text",
+              "analyzer": "ik_max_word",
+              "search_analyzer": "ik_max_word"
+            }
+          }
+        },
+        {
+          "str_default": {
+            "match": "*_s",
+            "match_mapping_type": "text",
+            "mapping": {
+              "type": "text"
+            }
+          }
+        },
+        {
+          "str_keyword": {
+            "match": "*",
+            "match_mapping_type": "keyword",
+            "mapping": {
+              "type": "keyword"
+            }
+          }
+        }
+      ]
+    },
+    "OnlineUserAlign": {
+      "properties":{
+        "uid":{
+          "type":"keyword"
+        },
+        "ven_guid":{
+          "type":"keyword"
+        },
+        "device":{
+          "type":"keyword"
+        },
+        "insert_dt":{
+          "type":"date",
+          "format": "epoch_second || yyyy-MM-dd HH:mm:ss"
+        }
+      }
+    }
+  }
+}
+
