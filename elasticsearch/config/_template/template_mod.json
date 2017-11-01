@@ -1,62 +1,65 @@
-PUT _template/template_oua
+PUT _template/template_mod
 
 {
-  "template" : "*_oua_*",
-  "mappings" : {
-    "_default_" : {
-      "_all" : {
-          "enabled" : false
-      },
-      "dynamic": false,
-      "dynamic_templates": [
-        {
-          "str_ik": {
-            "match": "*_ik",
-            "match_mapping_type": "text",
-            "mapping": {
-              "type": "text",
-              "analyzer": "ik_max_word",
-              "search_analyzer": "ik_max_word"
-            }
-          }
+    "template":"*_mod_*",
+    "mappings":{
+        "_default_":{
+            "_all":{
+                "enabled":false
+            },
+            "dynamic":false,
+            "dynamic_templates":[
+                {
+                    "str_ik":{
+                        "match":"*_ik",
+                        "match_mapping_type":"text",
+                        "mapping":{
+                            "type":"text",
+                            "analyzer":"ik_max_word",
+                            "search_analyzer":"ik_max_word"
+                        }
+                    }
+                },
+                {
+                    "str_default":{
+                        "match":"*_s",
+                        "match_mapping_type":"text",
+                        "mapping":{
+                            "type":"text"
+                        }
+                    }
+                },
+                {
+                    "str_keyword":{
+                        "match":"*",
+                        "match_mapping_type":"keyword",
+                        "mapping":{
+                            "type":"keyword"
+                        }
+                    }
+                }
+            ]
         },
-        {
-          "str_default": {
-            "match": "*_s",
-            "match_mapping_type": "text",
-            "mapping": {
-              "type": "text"
+        "*_i2i":{
+            "properties":{
+                "gid":{
+                    "type":"keyword"
+                },
+                "indicators":{
+                    "type":"keyword"
+                },
+                "indicators_raw":{
+                    "type":"keyword"
+                },
+                "params":{
+                    "type":"keyword"
+                },
+                "update_time":{
+                    "type":"date",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
+                    "numeric_resolution":"hours"
+                }
             }
-          }
-        },
-        {
-          "str_keyword": {
-            "match": "*",
-            "match_mapping_type": "keyword",
-            "mapping": {
-              "type": "keyword"
-            }
-          }
         }
-      ]
-    },
-    "OnlineUserAlign": {
-      "properties":{
-        "uid":{
-          "type":"keyword"
-        },
-        "ven_guid":{
-          "type":"keyword"
-        },
-        "device":{
-          "type":"keyword"
-        },
-        "insert_dt":{
-          "type":"date",
-          "format": "epoch_second || yyyy-MM-dd HH:mm:ss"
-        }
-      }
     }
-  }
 }
-
