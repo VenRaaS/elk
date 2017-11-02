@@ -46,10 +46,12 @@ PUT _template/template_mod
                     "type":"keyword"
                 },
                 "indicators":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "index": false
                 },
                 "indicators_raw":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "index": false
                 },
                 "params":{
                     "type":"keyword"
@@ -57,7 +59,6 @@ PUT _template/template_mod
                 "insert_dt":{
                     "type":"date",
                     "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
-                    "index": false
                 }
             }
         }
