@@ -6,13 +6,11 @@ PUT _template/template_gocc
     "_default_": {
       "_all": {
         "enabled": false
-      },
-      "dynamic": false,
+      },      
       "dynamic_templates": [
         {
           "str_ik": {
-            "match": "*_ik",
-            "match_mapping_type": "text",
+            "match": "*_ik",            
             "mapping": {
               "type": "text",
               "analyzer": "ik_max_word",
@@ -22,8 +20,7 @@ PUT _template/template_gocc
         },
         {
           "str_default": {
-            "match": "*_s",
-            "match_mapping_type": "text",
+            "match": "*_s",            
             "mapping": {
               "type": "text"
             }
@@ -31,8 +28,7 @@ PUT _template/template_gocc
         },
         {
           "str_keyword": {
-            "match": "*",
-            "match_mapping_type": "keyword",
+            "match": "*",            
             "mapping": {
               "type": "keyword"
             }
@@ -59,7 +55,7 @@ PUT _template/template_gocc
         },
         "update_dt": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         }
       }
     },
@@ -126,11 +122,11 @@ PUT _template/template_gocc
         },
         "first_rts_date": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         },
         "update_dt": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         }
       }
     },
@@ -154,7 +150,7 @@ PUT _template/template_gocc
         },
         "update_dt": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         }
       }
     },
@@ -171,7 +167,7 @@ PUT _template/template_gocc
         },
         "order_date": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         },
         "gid": {
           "type": "keyword"
@@ -209,7 +205,7 @@ PUT _template/template_gocc
         },
         "update_dt": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         }
       }
     },
@@ -223,7 +219,7 @@ PUT _template/template_gocc
         },
         "b_date": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         },
         "country": {
           "type": "keyword"
@@ -236,7 +232,7 @@ PUT _template/template_gocc
         },
         "update_dt": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         }
       }
     },
@@ -250,7 +246,7 @@ PUT _template/template_gocc
         },
         "update_dt": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         }
       }
     },
@@ -268,7 +264,7 @@ PUT _template/template_gocc
         },
         "update_dt": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         }
       }
     },
@@ -280,7 +276,7 @@ PUT _template/template_gocc
         },
         "update_dt": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         }
       }
     },
@@ -294,7 +290,7 @@ PUT _template/template_gocc
         },
         "update_dt": {
           "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || strict_date_hour_minute_second_millis || strict_date_optional_time || epoch_millis"
+          "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
         }
       }
     }
