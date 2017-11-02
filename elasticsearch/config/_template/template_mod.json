@@ -40,7 +40,7 @@ PUT _template/template_mod
                 }
             ]
         },
-        "*_i2i":{
+        "cooc_i2i":{
             "properties":{
                 "gid":{
                     "type":"keyword"
