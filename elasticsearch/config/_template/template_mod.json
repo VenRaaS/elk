@@ -11,7 +11,7 @@ PUT _template/template_mod
                 {
                     "keyword_noindex":{
                         "match_pattern":"regex",
-                        "match":"^(indicators)|(indicators_raw)|(breadcrumb)$",
+                        "match":"^(indicators)|(indicators_raw)$",
                         "mapping":{
                             "type":"keyword",
                             "index":false
@@ -55,6 +55,21 @@ PUT _template/template_mod
                 }
             ]
         },
+        "breadcrumb":{
+            "properties":{
+                "breadcrumb":{
+                    "type":"keyword",
+                    "index":false
+                }
+            }
+        },
+        "goods_category_flatten":{
+            "properties":{
+                "le":{
+                    "type":"keyword"
+                }
+            }
+        },
         "vig":{
             "properties":{
                 "score":{
@@ -65,3 +80,4 @@ PUT _template/template_mod
         }
     }
 }
+
