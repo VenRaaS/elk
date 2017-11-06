@@ -28,7 +28,8 @@ PUT _template/template_opp
         },
         {
           "str_keyword": {
-            "match": "*",            
+            "match": "*",
+            "match_mapping_type": "keyword",
             "mapping": {
               "type": "keyword"
             }
