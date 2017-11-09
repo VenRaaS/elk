@@ -46,7 +46,9 @@ vm.max_map_count=262144
    - `bin/elasticsearch` (`bin/elasticsearch -d` demon mode) if linux like OS
 6. browse `http://localhost:9200` and check whether the response message looks as below.  
    `{"status" : 200, "name" : "Thing", "cluster_name" : "elasticsearch", ... }`
-7. check `http://localhost:9200/_plugin/head/` for managemnet console [elasticsearch-head](http://mobz.github.io/elasticsearch-head/)
+7. install Chrome extension [ElasticSearch Head](https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm/)
+8. check `http://localhost:9200/_plugin/head/` for managemnet console.  
+   see [elasticsearch-head](https://github.com/mobz/elasticsearch-head) for detail.
 
 For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
 
