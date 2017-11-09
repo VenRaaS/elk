@@ -62,7 +62,7 @@ The concept of the data structure relationship regarding {index}, {type} and {id
 ##### Overview
 The structure of indices and typies with respect to venraas and customers illustrates with following image.
 
-<img src="https://drive.google.com/uc?id=0B78KhWqVkVmtRk91RDhENmd0U0E" width="700">
+<img src="https://drive.google.com/uc?id=1dOmpNGHPpwCfty8_c8W" width="700">
 
 ##### Customer data structure
 
@@ -77,8 +77,6 @@ For example,
 if our customer is titled `goshopping`, then the creation requests of the 4 indices look like follows.
 
 * `POST http://localhost:9200/goshopping_gocc/`
-
-* `POST http://localhost:9200/goshopping_bill/`
 
 * `POST http://localhost:9200/goshopping_mod/`
 
