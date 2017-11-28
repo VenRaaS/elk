@@ -31,7 +31,7 @@ elk    -    nofile       65536
 elk    -    memlock      unlimited
 ```
 * [mmapfs](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
-  * increase the limits of mmap count  
+  * increase the limits of mmap count, and run `sysctl vm.max_map_count` to verify
 ```
 # /etc/sysctl.conf
 vm.max_map_count=262144
