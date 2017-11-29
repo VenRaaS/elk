@@ -1,6 +1,9 @@
 {
     "template_model":{
-        "template":"*_mod",
+        "template":"*_mod_*",
+        "settings" : {
+            "number_of_shards" : 3
+        },
         "mappings":{
             "_default_":{
                 "_all":{
