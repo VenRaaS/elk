@@ -16,7 +16,8 @@
                 "dynamic_templates":[
                     {
                         "keyword_noindex":{                            
-                            "match":"indicators*",
+                            "match_pattern":"regex",
+                            "match":"^(indicators)|(indicators_raw)$",
                             "mapping":{
                                 "type":"string",
                                 "index":"no"
