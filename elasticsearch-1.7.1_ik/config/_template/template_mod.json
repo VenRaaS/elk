@@ -18,7 +18,7 @@ PUT _template/template_model
         {
           "keyword_noindex": {
             "match_pattern": "regex",
-            "match": "^(indicators)|(indicators_raw)$",
+            "match": "^(indicators)|(indicators_raw)|(gids)$",
             "mapping": {
               "type": "string",
               "index": "no"
