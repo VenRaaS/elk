@@ -47,11 +47,7 @@
             "tp":{
                 "_id":{
                     "path":"category_code"
-                },
-                "_ttl":{
-                    "enabled":true,
-                    "default":"90d"
-                },
+                },                
                 "properties":{
                     "code_name":{
                         "type":"string",
