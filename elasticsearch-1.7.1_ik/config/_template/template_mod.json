@@ -15,6 +15,15 @@
                 },
                 "dynamic_templates":[
                     {
+                        "keyword_noindex":{                            
+                            "match":"indicators*",
+                            "mapping":{
+                                "type":"string",
+                                "index":"no"
+                            }
+                        }
+                    },
+                    {
                         "str_ik":{
                             "match":"*_ik",
                             "match_mapping_type":"string",
