@@ -26,6 +26,16 @@ PUT _template/template_model
           }
         },
         {
+          "update_time": {
+            "match":"update_time",
+            "mapping":{
+              "type":"date",
+              "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
+              "index": "no"
+            }                
+          }
+        },
+        {
           "str_ik": {
             "match": "*_ik",
             "match_mapping_type": "string",
