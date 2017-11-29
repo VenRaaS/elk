@@ -107,11 +107,12 @@ PUT _template/template_model
         }
       }
     },
-    "breadcrumb": {      
-      "properties": {        
+    "breadcrumb": {
+      "properties": {  
         "breadcrumb": {
           "type": "string",
-          "index": "no"        
+          "index": "no"
+        }
       }
     },
     "ar_i2i": {
