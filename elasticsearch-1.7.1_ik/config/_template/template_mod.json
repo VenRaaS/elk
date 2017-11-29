@@ -74,35 +74,7 @@ PUT _template/template_model
           "type": "double"
         }
       }
-    },
-    "goods_category_flatten": {
-      "_id": {
-        "path": "id"
-      },
-      "properties": {
-        "code_name": {
-          "type": "string",
-          "index": "no"
-        },
-        "id": {
-          "type": "string",
-          "index": "no"
-        },
-        "gid": {
-          "type": "string",
-          "index": "not_analyzed"
-        },
-        "category_code": {
-          "type": "string",
-          "index": "not_analyzed"
-        },
-        "update_time": {
-          "type": "date",
-          "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
-          "numeric_resolution": "hours"
-        }
-      }
-    },
+    },    
     "category_flatten": {
       "_id": {
         "path": "id"
