@@ -6,6 +6,10 @@
                 "_all":{
                     "enabled":false
                 },
+                "_ttl":{
+                    "enabled":true,
+                    "default":"14d"
+                },
                 "dynamic_templates":[
                     {
                         "str_ik":{
@@ -76,10 +80,6 @@
                 "_id":{
                     "path":"gid"
                 },
-                "_ttl":{
-                    "enabled":true,
-                    "default":"90d"
-                },
                 "properties":{
                     "code_name":{
                         "type":"string",
@@ -106,10 +106,6 @@
             "goods_category_flatten":{
                 "_id":{
                     "path":"id"
-                },
-                "_ttl":{
-                    "enabled":true,
-                    "default":"90d"
                 },
                 "properties":{
                     "code_name":{
@@ -138,10 +134,6 @@
             "category_flatten":{
                 "_id":{
                     "path":"id"
-                },
-                "_ttl":{
-                    "enabled":true,
-                    "default":7776000000
                 },
                 "properties":{
                     "ancestor":{
@@ -175,10 +167,6 @@
                 "_id":{
                     "path":"id"
                 },
-                "_ttl":{
-                    "enabled":true,
-                    "default":"90d"
-                },
                 "properties":{
                     "code_name":{
                         "type":"string",
@@ -206,10 +194,6 @@
             "ar_i2i":{
                 "_id":{
                     "path":"gid"
-                },
-                "_ttl":{
-                    "enabled":true,
-                    "default":"90d"
                 },
                 "properties":{
                     "code_name":{
@@ -243,10 +227,6 @@
                 "_id":{
                     "path":"gid"
                 },
-                "_ttl":{
-                    "enabled":true,
-                    "default":"90d"
-                },
                 "properties":{
                     "code_name":{
                         "type":"string",
@@ -278,10 +258,6 @@
             "ar_c2c":{
                 "_id":{
                     "path":"category_code"
-                },
-                "_ttl":{
-                    "enabled":true,
-                    "default":"90d"
                 },
                 "properties":{
                     "code_name":{
@@ -317,11 +293,7 @@
                 },
                 "_id":{
                     "path":"gid"
-                },
-                "_ttl":{
-                    "enabled":true,
-                    "default":7776000000
-                },
+                },                
                 "properties":{
                     "code_name":{
                         "type":"string",
