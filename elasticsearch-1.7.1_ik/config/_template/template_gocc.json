@@ -45,10 +45,7 @@ PUT _template/template_gocc
                 }
             ]
         },
-        "category":{
-            "_id":{
-                "path":"_combo_id"
-            },
+        "category":{            
             "properties":{
                 "_combo_id":{
                     "type":"string",
@@ -80,9 +77,6 @@ PUT _template/template_gocc
             }
         },
         "goods":{
-            "_id":{
-                "path":"gid"
-            },
             "properties":{
                 "gid":{
                     "type":"string",
@@ -160,10 +154,7 @@ PUT _template/template_gocc
                 }
             }
         },
-        "goodscatecode":{
-            "_id":{
-                "path":"_combo_id"
-            },
+        "goodscatecode":{        
             "properties":{
                 "_combo_id":{
                     "type":"string",
@@ -264,9 +255,6 @@ PUT _template/template_gocc
             }
         },
         "customer":{
-            "_id":{
-                "path":"uid"
-            },
             "properties":{
                 "uid":{
                     "type":"string",
@@ -300,10 +288,7 @@ PUT _template/template_gocc
                 }
             }
         },
-        "group2category":{
-            "_id":{
-                "path":"_combo_id"
-            },
+        "group2category":{            
             "properties":{
                 "_combo_id":{
                     "type":"string",
@@ -324,10 +309,7 @@ PUT _template/template_gocc
                 }
             }
         },
-        "group_sort":{
-            "_id":{
-                "path":"group_id"
-            },
+        "group_sort":{            
             "properties":{
                 "group_id":{
                     "type":"string",
