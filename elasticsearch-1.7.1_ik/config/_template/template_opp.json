@@ -140,7 +140,7 @@ PUT _template/template_opp
             },
             "update_dt":{
                 "type":"date",
-                "index":"no"
+                "index":"no",
                 "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss.SSS || dateOptionalTime",                
                 "numeric_resolution":"seconds"
             },
