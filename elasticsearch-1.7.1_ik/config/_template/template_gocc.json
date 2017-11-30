@@ -332,11 +332,7 @@ PUT _template/template_gocc
                 }
             }
         },
-        "group_feat_rank":{
-            "_ttl":{
-                "enabled":true,
-                "default":"90d"
-            },
+        "group_feat_rank":{        
             "properties":{
                 "rank":{
                     "type":"string",
@@ -350,9 +346,6 @@ PUT _template/template_gocc
             }
         },
         "group2gid":{
-            "_id":{
-                "path":"id"
-            },
             "properties":{
                 "_combo_id":{
                     "type":"string",
