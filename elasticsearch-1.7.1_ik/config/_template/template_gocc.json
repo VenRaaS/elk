@@ -122,7 +122,7 @@ PUT _template/template_gocc
                 },
                 "goods_img_url":{
                     "type":"string",
-                    "index":"not_analyzed"
+                    "index": "no"                    
                 },
                 "availability":{
                     "type":"integer"
@@ -189,15 +189,8 @@ PUT _template/template_gocc
                 }
             }
         },
-        "orderlist":{
-            "_id":{
-                "path":"_combo_id"
-            },
-            "properties":{
-                "_combo_id":{
-                    "type":"string",
-                    "index":"not_analyzed"
-                },
+        "orderlist":{            
+            "properties":{                
                 "uid":{
                     "type":"string",
                     "index":"not_analyzed"
@@ -294,11 +287,7 @@ PUT _template/template_gocc
             }
         },
         "group2category":{            
-            "properties":{
-                "_combo_id":{
-                    "type":"string",
-                    "index":"not_analyzed"
-                },
+            "properties":{                
                 "group_id":{
                     "type":"string",
                     "index":"not_analyzed"
@@ -349,11 +338,7 @@ PUT _template/template_gocc
             }
         },
         "group2gid":{
-            "properties":{
-                "_combo_id":{
-                    "type":"string",
-                    "index":"not_analyzed"
-                },
+            "properties":{                
                 "group_id":{
                     "type":"string",
                     "index":"not_analyzed"
