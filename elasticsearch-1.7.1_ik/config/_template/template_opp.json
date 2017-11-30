@@ -2,6 +2,9 @@ PUT _template/template_opp
 
 {
     "template":"*_opp_*",
+    "settings":{
+        "number_of_shards":1
+    },
     "mappings":{
         "_default_":{
             "_all":{
