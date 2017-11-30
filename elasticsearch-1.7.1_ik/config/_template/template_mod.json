@@ -3,99 +3,99 @@ https://www.elastic.co/guide/en/elasticsearch/reference/1.7/mapping-root-object-
 PUT _template/template_model
 
 {
-  "template": "*_mod_*",
-  "settings": {
-    "number_of_shards": 3
-  },
-  "mappings": {
-    "_default_": {
-      "_all": {
-        "enabled": false
-      },
-      "_ttl": {
-        "enabled": true,
-        "default": "14d"
-      },
-      "dynamic_templates": [
-        {
-          "keyword_noindex": {
-            "match_pattern": "regex",
-            "match": "^(indicators)|(indicators_raw)|(gids)$",
-            "mapping": {
-              "type": "string",
-              "index": "no"
-            }
-          }
-        },
-        {
-          "update_time": {
-            "match":"update_time",
-            "mapping":{
-              "type":"date",
-              "format": "yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
-              "index": "no"
-            }                
-          }
-        },
-        {
-          "str_ik": {
-            "match": "*_ik",
-            "match_mapping_type": "string",
-            "mapping": {
-              "type": "string",
-              "index": "analyzed",
-              "analyzer": "ik"
-            }
-          }
-        },
-        {
-          "str_default": {
-            "match": "*_s",
-            "match_mapping_type": "string",
-            "mapping": {
-              "type": "string",
-              "index": "analyzed"
-            }
-          }
-        },
-        {
-          "str_na": {
-            "match": "*",
-            "match_mapping_type": "string",
-            "mapping": {
-              "type": "string",
-              "index": "not_analyzed"
-            }
-          }
-        }
-      ]
-    },    
-    "vig": {      
-      "properties": {        
-        "score": {
-          "type": "double"
-        }
-      }
+    "template":"*_mod_*",
+    "settings":{
+        "number_of_shards":3
     },
-    "breadcrumb": {
-      "properties": {  
-        "breadcrumb": {
-          "type": "string",
-          "index": "no"
-        }
-      }
-    },
-    "tp_goods": {      
-      "properties": {        
-        "click_num": {
-          "type": "string",
-          "index": "no"
+    "mappings":{
+        "_default_":{
+            "_all":{
+                "enabled":false
+            },
+            "_ttl":{
+                "enabled":true,
+                "default":"14d"
+            },
+            "dynamic_templates":[
+                {
+                    "keyword_noindex":{
+                        "match_pattern":"regex",
+                        "match":"^(indicators)|(indicators_raw)|(gids)$",
+                        "mapping":{
+                            "type":"string",
+                            "index":"no"
+                        }
+                    }
+                },
+                {
+                    "update_time":{
+                        "match":"update_time",
+                        "mapping":{
+                            "type":"date",
+                            "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
+                            "index":"no"
+                        }
+                    }
+                },
+                {
+                    "str_ik":{
+                        "match":"*_ik",
+                        "match_mapping_type":"string",
+                        "mapping":{
+                            "type":"string",
+                            "index":"analyzed",
+                            "analyzer":"ik"
+                        }
+                    }
+                },
+                {
+                    "str_default":{
+                        "match":"*_s",
+                        "match_mapping_type":"string",
+                        "mapping":{
+                            "type":"string",
+                            "index":"analyzed"
+                        }
+                    }
+                },
+                {
+                    "str_na":{
+                        "match":"*",
+                        "match_mapping_type":"string",
+                        "mapping":{
+                            "type":"string",
+                            "index":"not_analyzed"
+                        }
+                    }
+                }
+            ]
         },
-        "order_num": {
-          "type": "string",
-          "index": "no"
-        }        
-      }
+        "vig":{
+            "properties":{
+                "score":{
+                    "type":"double"
+                }
+            }
+        },
+        "breadcrumb":{
+            "properties":{
+                "breadcrumb":{
+                    "type":"string",
+                    "index":"no"
+                }
+            }
+        },
+        "tp_goods":{
+            "properties":{
+                "click_num":{
+                    "type":"string",
+                    "index":"no"
+                },
+                "order_num":{
+                    "type":"string",
+                    "index":"no"
+                }
+            }
+        }
     }
-  }
 }
