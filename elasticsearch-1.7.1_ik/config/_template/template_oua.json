@@ -61,11 +61,7 @@ PUT _template/template_oua
                 "device":{
                     "type":"string",
                     "index":"not_analyzed"
-                },
-                "type":{
-                    "type":"string",
-                    "index":"not_analyzed"
-                },
+                },                
                 "insert_min_dt":{
                     "type":"date",
                     "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
