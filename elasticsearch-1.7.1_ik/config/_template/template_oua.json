@@ -1,80 +1,77 @@
+PUT _template/template_oua
+
 {
-    "template_oua" : {
-        "template" : "*_oua",
-        "mappings" : {
-            "_default_" : {
-                "_all" : {
-                    "enabled" : false
-                },
-                "dynamic_templates":[ 
-                    {
+    "template":"*_oua_*",
+    "settings":{
+        "number_of_shards":1
+    },
+    "mappings":{
+        "_default_":{
+            "_all":{
+                "enabled":false
+            },
+            "_ttl":{
+                "enabled":true,
+                "default":"14d"
+            },
+            "dynamic_templates":[
+                {
                     "str_ik":{
                         "match":"*_ik",
                         "match_mapping_type":"string",
                         "mapping":{
-                        "type":"string",
-                        "index":"analyzed",
-                        "analyzer":"ik"
+                            "type":"string",
+                            "index":"analyzed",
+                            "analyzer":"ik"
                         }
                     }
-                    },
-                    {
+                },
+                {
                     "str_default":{
                         "match":"*_s",
                         "match_mapping_type":"string",
                         "mapping":{
-                        "type":"string",
-                        "index":"analyzed"
+                            "type":"string",
+                            "index":"analyzed"
                         }
                     }
-                    },
-                    {
+                },
+                {
                     "str_na":{
                         "match":"*",
                         "match_mapping_type":"string",
                         "mapping":{
-                        "type":"string",
-                        "index":"not_analyzed"
+                            "type":"string",
+                            "index":"not_analyzed"
                         }
                     }
-                    }
-                ]
-            },
-
-            "OnlineUserAlign":{
-                "_id":{
-                    "index":"not_analyzed",
-                    "path":"ven_guid"
+                }
+            ]
+        },
+        "OnlineUserAlign":{
+            "properties":{
+                "uid":{
+                    "type":"string",
+                    "index":"not_analyzed"
                 },
-                "_ttl":{ 
-                    "enabled":true,
-                    "default":"90d"
+                "ven_guid":{
+                    "type":"string",
+                    "index":"not_analyzed"
                 },
-                "properties":{  
-                    "uid":{  
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "ven_guid":{  
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "device":{  
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "type":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "insert_min_dt":{  
-                        "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
-                        "numeric_resolution":"minutes"
-                    }
+                "device":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "type":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "insert_min_dt":{
+                    "type":"date",
+                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime",
+                    "numeric_resolution":"minutes"
                 }
             }
-
         }
     }
 }
