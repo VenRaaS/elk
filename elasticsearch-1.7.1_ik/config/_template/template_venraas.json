@@ -1,51 +1,52 @@
+
+PUT _template/template_venraas
+
 {
-    "template_venraas":{  
-        "template":"venraas",
-        "mappings":{  
-            "_default_":{  
-                "_all":{  
-                    "enabled":false
-                },
-                "dynamic_templates":[  
-                    {  
-                        "str_ik":{  
-                            "match":"*_ik",
-                            "match_mapping_type":"string",
-                            "mapping":{  
-                                "type":"string",
-                                "index":"analyzed",
-                                "analyzer":"ik"
-                            }
-                        }
-                    },
-                    {  
-                        "str_default":{  
-                            "match":"*_s",
-                            "match_mapping_type":"string",
-                            "mapping":{  
-                                "type":"string",
-                                "index":"analyzed"
-                            }
-                        }
-                    },
-                    {  
-                        "str_na":{  
-                            "match":"*",
-                            "match_mapping_type":"string",
-                            "mapping":{  
-                                "type":"string",
-                                "index":"not_analyzed"
-                            }
+    "template":"venraas",
+    "settings":{
+        "number_of_shards":1
+    },
+    "mappings":{
+        "_default_":{
+            "_all":{
+                "enabled":false
+            },
+            "dynamic_templates":[
+                {
+                    "str_ik":{
+                        "match":"*_ik",
+                        "match_mapping_type":"string",
+                        "mapping":{
+                            "type":"string",
+                            "index":"analyzed",
+                            "analyzer":"ik"
                         }
                     }
-                ]
-            },
+                },
+                {
+                    "str_default":{
+                        "match":"*_s",
+                        "match_mapping_type":"string",
+                        "mapping":{
+                            "type":"string",
+                            "index":"analyzed"
+                        }
+                    }
+                },
+                {
+                    "str_na":{
+                        "match":"*",
+                        "match_mapping_type":"string",
+                        "mapping":{
+                            "type":"string",
+                            "index":"not_analyzed"
+                        }
+                    }
+                }
+            ]
+        },
+        "com_pkgs":{
 
-            "com_pkgs":{
-            }
-            
-			
-			
         }
     }
 }
