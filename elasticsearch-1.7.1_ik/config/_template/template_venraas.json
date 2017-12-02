@@ -2,7 +2,7 @@
 PUT _template/template_venraas
 
 {
-    "template":"venraas",
+    "template":"venraas*",
     "settings":{
         "number_of_shards":1
     },
