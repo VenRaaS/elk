@@ -222,6 +222,7 @@ bootstrap.mlockall: true
 # Set both 'bind_host' and 'publish_host':
 #
 #network.host: 192.168.0.1
+#network.host: _local_
 
 # Set a custom port for the node to node communication (9300 by default):
 #
@@ -330,13 +331,13 @@ bootstrap.mlockall: true
 #
 # 1. Disable multicast discovery (enabled by default):
 #
-#discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.multicast.enabled: false
 #
 # 2. Configure an initial list of master nodes in the cluster
 #    to perform discovery when new nodes (master or data) are started:
 #
 #discovery.zen.ping.unicast.hosts: ["host1", "host2:port"]
-#discovery.zen.ping.unicast.hosts: ["es-node-01", "es-node-02"]
+discovery.zen.ping.unicast.hosts: ["instance-group-ww-es-v171-l9jf"]
 
 # EC2 discovery allows to use AWS EC2 API in order to perform discovery.
 #
@@ -353,13 +354,18 @@ bootstrap.mlockall: true
 # You have to install the cloud-gce plugin for enabling the GCE discovery.
 #
 # For more information, see <https://github.com/elasticsearch/elasticsearch-cloud-gce>.
-cloud:
-  gce:
-      project_id: eagleeyerecommand
-      zone: asia-east1-b
-discovery:
-      type: gce
-
+#-- unavailable, https://github.com/elastic/elasticsearch-cloud-gce/tree/v2.7.0/#version-270-for-elasticsearch-17,
+#   unworkable under es-v1.7.1 + gce-plugin-v2.7.
+#   unicast with a predefined host is recommended.
+#cloud:
+#  gce:
+#      project_id: eagleeyerecommand
+#      zone: asia-east1-b
+#discovery:
+#      type: gce
+#      gce:
+#          tags: es-ww
+#
 # Azure discovery allows to use Azure API in order to perform discovery.
 #
 # You have to install the cloud-azure plugin for enabling the Azure discovery.
