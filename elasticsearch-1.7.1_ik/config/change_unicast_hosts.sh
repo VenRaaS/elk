@@ -18,4 +18,4 @@ inst_str=$(printf ",\"%s\"" ${inst_ary[@]})
 
 inst_str=${inst_str:1}
 echo $inst_str
-#sed -i -e "s/REPLACE_TO_GROUP_LIST/${inst_str}/" ${SCRIPT_DIR}/elasticsearch.yml
+sed -i -e "s/REPLACE_TO_GROUP_LIST/${inst_str}/" ${SCRIPT_DIR}/elasticsearch.yml
