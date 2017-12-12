@@ -122,6 +122,10 @@ PUT _template/template_gocc
                     "type":"string",
                     "index": "no"                    
                 },
+                "goods_page_url":{
+                    "type":"string",
+                    "index": "no"                    
+                },
                 "availability":{
                     "type":"integer"
                 },
