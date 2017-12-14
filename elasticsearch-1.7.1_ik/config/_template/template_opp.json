@@ -1,126 +1,76 @@
+PUT _template/template_opp
+
 {
-    "template_opp":{
-        "template":"*_opp",
-        "mappings":{
-            "_default_":{
-                "_all":{
-                    "enabled":false
-                },
-                "_ttl":{
-                    "enabled":true,
-                    "default":"90d"
-                },
-                "dynamic_templates":[
-                    {
-                        "str_ik":{
-                            "match":"*_ik",
-                            "match_mapping_type":"string",
-                            "mapping":{
-                                "type":"string",
-                                "index":"analyzed",
-                                "analyzer":"ik"
-                            }
-                        }
-                    },
-                    {
-                        "str_default":{
-                            "match":"*_s",
-                            "match_mapping_type":"string",
-                            "mapping":{
-                                "type":"string",
-                                "index":"analyzed"
-                            }
-                        }
-                    },
-                    {
-                        "str_na":{
-                            "match":"*",
-                            "match_mapping_type":"string",
-                            "mapping":{
-                                "type":"string",
-                                "index":"not_analyzed"
-                            }
+    "template":"*_opp_*",
+    "settings":{
+        "number_of_shards":1
+    },
+    "mappings":{
+        "_default_":{
+            "_all":{
+                "enabled":false
+            },
+            "_ttl":{
+                "enabled":true,
+                "default":"14d"
+            },
+            "dynamic_templates":[
+                {
+                    "str_ik":{
+                        "match":"*_ik",
+                        "match_mapping_type":"string",
+                        "mapping":{
+                            "type":"string",
+                            "index":"analyzed",
+                            "analyzer":"ik"
                         }
                     }
-                ]
-            },
-            "OnlinePref":{
-                "properties":{
-                    "token":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "action":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "uid":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "ven_guid":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "ven_session":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "device":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "gid":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "category_code":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "category_code_le":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "client_ip":{
-                        "type":"ip"
-                    },
-                    "page_type":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "uri":{
-                        "type":"string",
-                        "index":"no"
-                    },
-                    "referrer":{
-                        "type":"string",
-                        "index":"no"
-                    },
-                    "referrer_host":{
-                        "type":"string",
-                        "index":"not_analyzed"
-                    },
-                    "geo_location":{
-                        "type":"geo_point"
-                    },
-                    "insert_min_dt":{
-                        "type":"date",
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
-                        "numeric_resolution":"minutes"
-                    },
-                    "insert_dt":{
-                        "type":"date",
-                        "index":"no",
-                        "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
-                        "numeric_resolution":"seconds"
+                },
+                {
+                    "str_default":{
+                        "match":"*_s",
+                        "match_mapping_type":"string",
+                        "mapping":{
+                            "type":"string",
+                            "index":"analyzed"
+                        }
+                    }
+                },
+                {
+                    "str_na":{
+                        "match":"*",
+                        "match_mapping_type":"string",
+                        "mapping":{
+                            "type":"string",
+                            "index":"not_analyzed"
+                        }
                     }
                 }
-            }
+            ]
         },
-        "user_prefer_goods":{
+        "OnlinePref":{
             "properties":{
-                "categ_code":{
+                "token":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "action":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "uid":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "ven_guid":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "ven_session":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "device":{
                     "type":"string",
                     "index":"not_analyzed"
                 },
@@ -128,24 +78,78 @@
                     "type":"string",
                     "index":"not_analyzed"
                 },
+                "category_code":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "category_code_le":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "client_ip":{
+                    "type":"ip"
+                },
+                "page_type":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "uri":{
+                    "type":"string",
+                    "index":"no"
+                },
+                "referrer":{
+                    "type":"string",
+                    "index":"no"
+                },
+                "referrer_host":{
+                    "type":"string",
+                    "index":"not_analyzed"
+                },
+                "geo_location":{
+                    "type":"geo_point"
+                },
+                "insert_min_dt":{
+                    "type":"date",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
+                    "numeric_resolution":"minutes"
+                },
                 "insert_dt":{
                     "type":"date",
-                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss.SSS || dateOptionalTime",
+                    "index":"no",
+                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd HH:mm:ss.SSS || date_hour_minute_second_millis || dateOptionalTime",
                     "numeric_resolution":"seconds"
-                },
-                "uid":{
-                    "type":"string",
-                    "index":"not_analyzed"
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss.SSS || dateOptionalTime",
-                    "numeric_resolution":"seconds"
-                },
-                "w_list_type":{
-                    "type":"string",
-                    "index":"not_analyzed"
                 }
+            }
+        }
+    },
+    "user_prefer_goods":{
+        "properties":{
+            "categ_code":{
+                "type":"string",
+                "index":"not_analyzed"
+            },
+            "gid":{
+                "type":"string",
+                "index":"not_analyzed"
+            },
+            "insert_dt":{
+                "type":"date",
+                "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss.SSS || dateOptionalTime",
+                "numeric_resolution":"seconds"
+            },
+            "uid":{
+                "type":"string",
+                "index":"not_analyzed"
+            },
+            "update_dt":{
+                "type":"date",
+                "index":"no",
+                "format":"yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss.SSS || dateOptionalTime",                
+                "numeric_resolution":"seconds"
+            },
+            "w_list_type":{
+                "type":"string",
+                "index":"not_analyzed"
             }
         }
     }
