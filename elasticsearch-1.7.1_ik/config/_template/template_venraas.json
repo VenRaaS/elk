@@ -50,6 +50,10 @@ PUT _template/template_venraas
                 "type":"date",
                 "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime"
             },
+            "updateTime":{
+                "type":"date",
+                "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime"
+            },
             "companies":{
                 "type":"object",
                 "properties":{
