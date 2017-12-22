@@ -109,7 +109,7 @@ PUT _template/template_model
                             "index":"not_analyzed"
                         },
                         "score":{
-                            "type":"double",'
+                            "type":"double",
                             "index":"no"
                         }
                     }
