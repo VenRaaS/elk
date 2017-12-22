@@ -117,6 +117,27 @@ PUT _template/template_model
                     }
             }
          }
+      },
+        "u2t_ag":{
+           "properties":{
+             "tag_list":{
+                    "type":"object",
+                    "properties":{
+                        "field":{
+                            "type":"string",
+                            "index":"not_analyzed"
+                        },
+                        "value":{
+                            "type":"string",
+                            "index":"not_analyzed"
+                        },
+                        "score":{
+                            "type":"double",
+                            "index":"no"
+                        }
+                    }
+            }
+         }
       }
     }
 }
