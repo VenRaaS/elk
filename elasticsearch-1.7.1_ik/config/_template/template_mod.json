@@ -97,7 +97,9 @@ PUT _template/template_model
                 }
             }
         },
-         "tag_list":{
+        "i2t_cooc":{
+           "properties":{
+             "tag_list":{
                     "type":"object",
                     "properties":{
                         "field":{
@@ -114,5 +116,7 @@ PUT _template/template_model
                         }
                     }
             }
+         }
+      }
     }
 }
