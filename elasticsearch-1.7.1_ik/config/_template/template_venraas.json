@@ -46,7 +46,30 @@ PUT _template/template_venraas
             ]
         },
         "com_pkgs":{
-
+            "properties":{
+                "update_dt":{
+                    "type":"date",
+                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime"
+                },
+                "updateTime":{
+                    "type":"date",
+                    "format":"yyyy-MM-dd HH:mm:ss || dateOptionalTime"
+                },
+                "companies":{
+                    "type":"object",
+                    "properties":{
+                        "enabled":{
+                            "type":"boolean"
+                        },
+                        "offline_model_status":{
+                            "type":"boolean"
+                        },
+                        "venraas_pt_status":{
+                            "type":"boolean"
+                        }
+                    }
+                }
+            }
         }
     }
 }
