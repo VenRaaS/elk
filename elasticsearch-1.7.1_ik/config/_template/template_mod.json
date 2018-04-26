@@ -96,6 +96,48 @@ PUT _template/template_model
                     "index":"no"
                 }
             }
-        }
+        },
+        "i2t_cooc":{
+           "properties":{
+             "tag_list":{
+                    "type":"object",
+                    "properties":{
+                        "field":{
+                            "type":"string",
+                            "index":"not_analyzed"
+                        },
+                        "value":{
+                            "type":"string",
+                            "index":"not_analyzed"
+                        },
+                        "score":{
+                            "type":"double",
+                            "index":"no"
+                        }
+                    }
+            }
+         }
+      },
+        "u2t_ag":{
+           "properties":{
+             "tag_list":{
+                    "type":"object",
+                    "properties":{
+                        "field":{
+                            "type":"string",
+                            "index":"not_analyzed"
+                        },
+                        "value":{
+                            "type":"string",
+                            "index":"not_analyzed"
+                        },
+                        "score":{
+                            "type":"double",
+                            "index":"no"
+                        }
+                    }
+            }
+         }
+      }
     }
 }
