@@ -19,7 +19,7 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 
 ### Prerequisite
 * Java runtime (JRE/JDK) 1.8+  
-`apt-get install openjdk-8-jdk`
+`apt-get install openjdk-8-jdk`, on ubuntu 14.04 LTS or above
 
 ### Elasticsearch
 #### System Configuration
