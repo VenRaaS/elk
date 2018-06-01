@@ -28,7 +28,7 @@ most of following instructions references from [Important System Configuration](
 * [/etc/security/limits.conf](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/setting-system-settings.html#limits.conf)
   * set the maximum number of open files for the elasticsearch user, e.g. elk
   * [ubuntu and `limits.conf`](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/setting-system-settings.html#limits.conf)
-    * to enable the `limits.conf` file, uncomment the following line `session required pam_limits.so` in `/etc/pam.d/su`
+    * to enable the `limits.conf` file, **uncomment** the following line `#session    required   pam_limits.so` => `session required pam_limits.so` in `/etc/pam.d/su`
   * grant elasticsearch user permission to lock memory 
 ```
 # /etc/security/limits.conf
