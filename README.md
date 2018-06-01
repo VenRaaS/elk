@@ -24,6 +24,7 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 
 ### Elasticsearch
 #### System Configuration
+all of following instructions references from [https://www.elastic.co/guide/en/elasticsearch/reference/5.6/system-config.html](https://www.elastic.co/guide/en/elasticsearch/reference/5.3/system-config.html)
 * [/etc/security/limits.conf](https://www.elastic.co/guide/en/elasticsearch/reference/current/setting-system-settings.html#limits.conf)
   * set the maximum number of open files for the elasticsearch user, e.g. elk
   * [ubuntu and `limits.conf`](https://www.elastic.co/guide/en/elasticsearch/reference/current/setting-system-settings.html#limits.conf)
