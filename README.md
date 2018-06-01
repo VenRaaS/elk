@@ -24,10 +24,10 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 
 ### Elasticsearch
 #### System Configuration 
-most of following instructions references from [Important System Configuration](https://www.elastic.co/guide/en/elasticsearch/reference/5.3/system-config.html)
-* [/etc/security/limits.conf](https://www.elastic.co/guide/en/elasticsearch/reference/current/setting-system-settings.html#limits.conf)
+most of following instructions references from [Important System Configuration](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/system-config.html)
+* [/etc/security/limits.conf](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/setting-system-settings.html#limits.conf)
   * set the maximum number of open files for the elasticsearch user, e.g. elk
-  * [ubuntu and `limits.conf`](https://www.elastic.co/guide/en/elasticsearch/reference/current/setting-system-settings.html#limits.conf)
+  * [ubuntu and `limits.conf`](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/setting-system-settings.html#limits.conf)
     * to enable the `limits.conf` file, uncomment the following line `session required pam_limits.so` in `/etc/pam.d/su`
   * grant elasticsearch user permission to lock memory 
 ```
