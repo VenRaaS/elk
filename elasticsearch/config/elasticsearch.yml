@@ -40,7 +40,7 @@ cluster.name: westernwall
 #
 # Lock the memory on startup:
 #
-#bootstrap.memory_lock: true
+bootstrap.memory_lock: true
 #
 # Make sure that the heap size is set to about half the memory available
 # on the system and that the owner of the process is allowed to use this
@@ -50,9 +50,11 @@ cluster.name: westernwall
 #
 # ---------------------------------- Network -----------------------------------
 #
+network.host: _gce_
+
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
-network.host: _gce_
+#network.host: 192.168.0.1
 #
 # Set a custom port for HTTP:
 #
@@ -63,13 +65,13 @@ network.host: _gce_
 # --------------------------------- Discovery ----------------------------------
 #
 cloud:
-  gce:
-      project_id: venraas-test
-      zone: asia-east1-b
+    gce:
+        project_id: venraas-test
+        zone: asia-east1-b
 discovery:
-      type: gce
-      gce:
-          tags: ww       # filter by GCE tag
+    zen.hosts_provider: gce
+    gce:
+        tags: es-ww
 
 # Pass an initial list of hosts to perform discovery when new node is started:
 # The default list of hosts is ["127.0.0.1", "[::1]"]

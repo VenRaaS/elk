@@ -1,7 +1,7 @@
 @echo off
 SETLOCAL enabledelayedexpansion
 
-TITLE Elasticsearch Service 5.6.3
+TITLE Elasticsearch Service 5.6.8
 
 rem TODO: remove for Elasticsearch 6.x
 set bad_env_var=0
@@ -77,7 +77,7 @@ if EXIST "%EXECUTABLE%" goto okExe
 echo elasticsearch-service-(x86|x64).exe was not found...
 
 :okExe
-set ES_VERSION=5.6.3
+set ES_VERSION=5.6.8
 
 if "%LOG_DIR%" == "" set LOG_DIR=%ES_HOME%\logs
 
@@ -167,9 +167,7 @@ if exist "%JAVA_HOME%\bin\client\jvm.dll" (
 )
 
 :foundJVM
-if "%ES_JVM_OPTIONS%" == "" (
-set ES_JVM_OPTIONS=%ES_HOME%\config\jvm.options
-)
+if "%ES_JVM_OPTIONS%" == "" set ES_JVM_OPTIONS=%ES_HOME%\config\jvm.options
 
 if not "%ES_JAVA_OPTS%" == "" set ES_JAVA_OPTS=%ES_JAVA_OPTS: =;%
 
@@ -234,15 +232,15 @@ for %%a in ("%ES_JAVA_OPTS:;=","%") do (
 @endlocal & set JVM_MS=%JVM_MS% & set JVM_MX=%JVM_MX% & set JVM_SS=%JVM_SS%
 
 if "%JVM_MS%" == "" (
-  echo minimum heap size not set; configure using -Xms via %ES_JVM_OPTIONS% or ES_JAVA_OPTS
+  echo minimum heap size not set; configure using -Xms via "%ES_JVM_OPTIONS%" or ES_JAVA_OPTS
   goto:eof
 )
 if "%JVM_MX%" == "" (
-  echo maximum heap size not set; configure using -Xmx via %ES_JVM_OPTIONS% or ES_JAVA_OPTS
+  echo maximum heap size not set; configure using -Xmx via "%ES_JVM_OPTIONS%" or ES_JAVA_OPTS
   goto:eof
 )
 if "%JVM_SS%" == "" (
-  echo thread stack size not set; configure using -Xss via %ES_JVM_OPTIONS% or ES_JAVA_OPTS
+  echo thread stack size not set; configure using -Xss via "%ES_JVM_OPTIONS%" or ES_JAVA_OPTS
   goto:eof
 )
 
@@ -265,7 +263,7 @@ if not "%SERVICE_USERNAME%" == "" (
 	)
 )
 
-"%EXECUTABLE%" //IS//%SERVICE_ID% --Startup %ES_START_TYPE% --StopTimeout %ES_STOP_TIMEOUT% --StartClass org.elasticsearch.bootstrap.Elasticsearch --StopClass org.elasticsearch.bootstrap.Elasticsearch --StartMethod main --StopMethod close --Classpath "%ES_CLASSPATH%" --JvmMs %JVM_MS% --JvmMx %JVM_MX% --JvmSs %JVM_SS% --JvmOptions %ES_JAVA_OPTS% ++JvmOptions %ES_PARAMS% %LOG_OPTS% --PidFile "%SERVICE_ID%.pid" --DisplayName "%SERVICE_DISPLAY_NAME%" --Description "%SERVICE_DESCRIPTION%" --Jvm "%%JAVA_HOME%%%JVM_DLL%" --StartMode jvm --StopMode jvm --StartPath "%ES_HOME%" %SERVICE_PARAMS%
+"%EXECUTABLE%" //IS//%SERVICE_ID% --Startup %ES_START_TYPE% --StopTimeout %ES_STOP_TIMEOUT% --StartClass org.elasticsearch.bootstrap.Elasticsearch --StartMethod main ++StartParams --quiet --StopClass org.elasticsearch.bootstrap.Elasticsearch --StopMethod close --Classpath "%ES_CLASSPATH%" --JvmMs %JVM_MS% --JvmMx %JVM_MX% --JvmSs %JVM_SS% --JvmOptions %ES_JAVA_OPTS% ++JvmOptions %ES_PARAMS% %LOG_OPTS% --PidFile "%SERVICE_ID%.pid" --DisplayName "%SERVICE_DISPLAY_NAME%" --Description "%SERVICE_DESCRIPTION%" --Jvm "%%JAVA_HOME%%%JVM_DLL%" --StartMode jvm --StopMode jvm --StartPath "%ES_HOME%" %SERVICE_PARAMS%
 
 if not errorlevel 1 goto installed
 echo Failed installing '%SERVICE_ID%' service
