@@ -32,8 +32,9 @@ most of following instructions references from [Important System Configuration](
   * grant elasticsearch user permission to lock memory 
 ```
 # /etc/security/limits.conf
-elk    -    nofile       65536                                  
-elk    -    memlock      unlimited
+elk    -    nofile       65536                                                                                                     
+elk    -    memlock      unlimited                                                                                                 
+elk    -    nproc        2048                                                                                                      
 ```  
   
 * [mmapfs](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
