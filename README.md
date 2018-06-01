@@ -3,7 +3,7 @@
 * [Prerequisite](#prerequisite)
 * [Elasticsearch](#elasticsearch)
   * [Installation](#installation)
-  * [](#system-configuration)
+  * [System Configuration](#system-configuration)
   * [Preliminary](#preliminary)
   * [Create indices](#create-indices)
     * [Overview](#overview)
