@@ -26,16 +26,17 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 #### System Configuration 
 most of following instructions references from [Important System Configuration](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/system-config.html)
 * [/etc/security/limits.conf](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/setting-system-settings.html#limits.conf)
-  * set the maximum number of open files for the elasticsearch user, e.g. elk
   * [ubuntu and `limits.conf`](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/setting-system-settings.html#limits.conf)
     * to enable the `limits.conf` file, **uncomment** the following line `#session    required   pam_limits.so` => `session required pam_limits.so` in `/etc/pam.d/su`
-  * grant elasticsearch user permission to lock memory 
+  * set the **maximum number of open files** for the elasticsearch user, e.g. elk  
+  * grant elasticsearch user **permission to lock memory**
+  * make sure that the **number of threads that the Elasticsearch user (elk)** can create is at least 2048
 ```
 # /etc/security/limits.conf
 elk    -    nofile       65536                                                                                                     
 elk    -    memlock      unlimited                                                                                                 
 elk    -    nproc        2048                                                                                                      
-```  
+```   
   
 * [mmapfs](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
   * increase the limits of mmap count, and run `sysctl vm.max_map_count` to verify
