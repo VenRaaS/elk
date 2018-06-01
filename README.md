@@ -31,6 +31,9 @@ All configuration and binary of [Elasticsearch, Logstash and Kibana](https://www
 elk    -    nofile       65536                                  
 elk    -    memlock      unlimited
 ```
+  * [Ubuntu and `limits.conf`](https://www.elastic.co/guide/en/elasticsearch/reference/current/setting-system-settings.html#limits.conf)
+    * to enable the `limits.conf` file, edit /etc/pam.d/su and uncomment the following line
+  
 * [mmapfs](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)
   * increase the limits of mmap count, and run `sysctl vm.max_map_count` to verify
 ```
