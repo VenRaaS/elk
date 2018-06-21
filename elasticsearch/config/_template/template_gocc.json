@@ -15,6 +15,7 @@ PUT _template/template_gocc
             "dynamic_templates":[
                 {
                     "update_datetime":{
+                        "match_pattern": "regex",
                         "match":"^(update_dt)|(update_time)$",
                         "mapping":{
                             "type":"date",
