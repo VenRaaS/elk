@@ -4,7 +4,7 @@ PUT _template/template_opp
     "template":"*_opp_*",
     "settings":{
         "index":{
-            "number_of_shards":"1"
+            "number_of_shards":"3"
         }
     },
     "mappings":{
