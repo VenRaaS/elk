@@ -2,6 +2,11 @@ PUT _template/template_mod
 
 {
     "template":"*_mod_*",
+    "settings":{
+        "index":{
+            "number_of_shards":"3"
+        }
+    },
     "mappings":{
         "_default_":{
             "_all":{
