@@ -14,6 +14,15 @@ PUT _template/template_gocc
             },
             "dynamic_templates":[
                 {
+                    "update_datetime":{
+                        "match":"^(update_dt)|(update_time)$",
+                        "mapping":{
+                            "type":"date",
+                            "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
+                        }
+                    }
+                },
+                {
                     "str_ik":{
                         "match":"*_ik",
                         "mapping":{
@@ -99,14 +108,6 @@ PUT _template/template_gocc
                     "type":"date",
                     "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 },
-                "update_time":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
-                },
                 "sys_update_time":{
                     "type":"date",
                     "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
@@ -161,10 +162,6 @@ PUT _template/template_gocc
                 },
                 "delivery_type":{
                     "type":"keyword"
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 }
             }
         },
@@ -173,10 +170,6 @@ PUT _template/template_gocc
                 "rank":{
                     "type":"keyword",
                     "index":false
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 }
             }
         },
@@ -187,10 +180,6 @@ PUT _template/template_gocc
                 },
                 "gid":{
                     "type":"keyword"
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 }
             }
         },
@@ -214,10 +203,6 @@ PUT _template/template_gocc
                 },
                 "area_2":{
                     "type":"keyword"
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 }
             }
         },
@@ -238,10 +223,6 @@ PUT _template/template_gocc
                 },
                 "func_type":{
                     "type":"keyword"
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 }
             }
         },
@@ -261,10 +242,6 @@ PUT _template/template_gocc
                 },
                 "le":{
                     "type":"keyword"
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 }
             }
         },
@@ -275,10 +252,6 @@ PUT _template/template_gocc
                 },
                 "category_code":{
                     "type":"keyword"
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 }
             }
         },
@@ -293,13 +266,8 @@ PUT _template/template_gocc
                 "sort":{
                     "type":"scaled_float",
                     "scaling_factor":10
-                },
-                "update_dt":{
-                    "type":"date",
-                    "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 }
             }
         }
     }
 }
-
