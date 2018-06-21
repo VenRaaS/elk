@@ -34,6 +34,15 @@ PUT _template/template_mod
                     }
                 },
                 {
+                    "tag_list":{
+                        "match":"tag_list",
+                        "mapping":{
+                            "type":"object",                        
+                            "enabled":false                        
+                        }
+                    }
+                },
+                {
                     "str_ik":{
                         "match":"*_ik",
                         "mapping":{
@@ -76,6 +85,6 @@ PUT _template/template_mod
                     "scaling_factor":100
                 }
             }
-        }
+        }        
     }
 }
