@@ -48,9 +48,9 @@ PUT _template/template_mod
                 },
                 {
                     "str_default":{
-                        "match":"*",
+                        "match_mapping_type":"string",
                         "mapping":{
-                            "type":"keyword"
+                            "type":"keyword"                            
                         }
                     }
                 }
