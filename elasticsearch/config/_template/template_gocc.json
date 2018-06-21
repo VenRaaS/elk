@@ -40,21 +40,12 @@ PUT _template/template_gocc
                             "type":"text"
                         }
                     }
-                },
-                {
-                    "str_keyword":{
-                        "match":"*_k",
-                        "mapping":{
-                            "type":"keyword"
-                        }
-                    }
-                },
+                },                
                 {
                     "str_default":{
                         "match_mapping_type":"string",
                         "mapping":{
-                            "type":"keyword",
-                            "index":false
+                            "type":"keyword"                            
                         }
                     }
                 }
@@ -97,6 +88,14 @@ PUT _template/template_gocc
                     "analyzer":"ik_max_word",
                     "search_analyzer":"ik_max_word",
                     "term_vector":"with_positions_offsets"
+                },
+                "goods_img_url":{
+                    "type":"keyword",
+                    "index":false
+                },
+                "goods_page_url":{
+                    "type":"keyword",
+                    "index":false
                 },
                 "availability":{
                     "type":"integer"
