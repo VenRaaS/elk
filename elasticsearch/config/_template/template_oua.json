@@ -61,6 +61,7 @@ PUT _template/template_oua
             ]
         },
         "OnlineUserAlign":{
+            "dynamic": false,
             "properties":{
                 "uid":{
                     "type":"keyword"
