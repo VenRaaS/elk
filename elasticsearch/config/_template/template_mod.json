@@ -18,8 +18,7 @@ PUT _template/template_mod
                         "match_pattern":"regex",
                         "match":"^(indicators)|(indicators_raw)$",
                         "mapping":{
-                            "type":"keyword",
-                            "index":false
+                            "enabled": false                            
                         }
                     }
                 },
