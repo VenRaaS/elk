@@ -70,8 +70,7 @@ PUT _template/template_oua
                     "type":"keyword"
                 },
                 "device":{
-                    "type":"keyword",
-                    "index":false
+                    "type":"keyword"                    
                 },
                 "insert_dt":{
                     "type":"date",
