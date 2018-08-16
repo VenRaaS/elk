@@ -38,7 +38,7 @@ elk    -    memlock      unlimited
 elk    -    nproc        2048                                                                                                      
 ```   
   
-* [mmapfs](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html)(reboot required)
+* [mmapfs](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html) (reboot required)
   * increase the limits of mmap count, and run `sysctl vm.max_map_count` to verify
 ```
 # /etc/sysctl.conf
