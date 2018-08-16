@@ -57,6 +57,12 @@ vm.max_map_count=262144
 7. install Chrome extension [ElasticSearch Head](https://chrome.google.com/webstore/detail/elasticsearch-head/ffmkiejjmecolpfloofpjologoblkegm/)
 8. check `http://localhost:9200/_plugin/head/` for managemnet console.  
    see [elasticsearch-head](https://github.com/mobz/elasticsearch-head) for detail.
+9. (optional) [System call filter check](https://www.elastic.co/guide/en/elasticsearch/reference/master/_system_call_filter_check.html#_system_call_filter_check)
+`seccomp unavailable: CONFIG_SECCOMP not compiled into kernel, CONFIG_SECCOMP and CONFIG_SECCOMP_FILTER are needed`
+Some OS which does not support `CONFIG_SECCOMP`, please add the following setting into `elasticsearch.yaml`
+```
+bootstrap.system_call_filter: false
+```
 
 For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
 
