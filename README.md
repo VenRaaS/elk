@@ -61,7 +61,7 @@ vm.max_map_count=262144
 `seccomp unavailable: CONFIG_SECCOMP not compiled into kernel, CONFIG_SECCOMP and CONFIG_SECCOMP_FILTER are needed ...`  
 Some OS which does not support `CONFIG_SECCOMP`, please set `bootstrap.system_call_filter: false` into `elasticsearch.yaml`.
 
-For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html).
+For more info, see [elastic](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/setup.html).
 
 #### Preliminary 
 Data in ES is able to be access by the restful API, e.g. `http://localhost:9200/{index}/{type}/{id}`.  
