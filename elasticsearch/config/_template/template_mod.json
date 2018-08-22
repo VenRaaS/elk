@@ -1,7 +1,7 @@
 PUT _template/template_mod
 
 {
-    "template":"*_mod_*",
+    "template":"*_mod*",
     "settings":{
         "index":{
             "number_of_shards":"2"
