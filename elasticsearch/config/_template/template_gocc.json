@@ -1,7 +1,7 @@
 PUT _template/template_gocc
 
 {
-    "template":"*_gocc_*",
+    "template":"*_gocc*",
     "settings":{
         "index":{
             "number_of_shards":"1"
