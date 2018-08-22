@@ -1,7 +1,7 @@
 PUT _template/template_oua
 
 {
-    "template":"*_oua_*",
+    "template":"*_oua*",
     "settings":{
         "index":{
             "number_of_shards":"1"
