@@ -41,7 +41,7 @@ cluster.name: westernwall
 #
 # Lock the memory on startup:
 #
-#bootstrap.memory_lock: true
+bootstrap.memory_lock: true
 #
 # Make sure that the heap size is set to about half the memory available
 # on the system and that the owner of the process is allowed to use this
@@ -53,7 +53,7 @@ cluster.name: westernwall
 #
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
-#network.host: 192.168.0.1
+network.host: 192.168.0.1
 #
 # Set a custom port for HTTP:
 #
@@ -66,7 +66,7 @@ cluster.name: westernwall
 # Pass an initial list of hosts to perform discovery when new node is started:
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
-#discovery.zen.ping.unicast.hosts: ["host1", "host2"]
+discovery.zen.ping.unicast.hosts: ["host1", "host2"]
 #
 # Prevent the "split brain" by configuring the majority of nodes (total number of master-eligible nodes / 2 + 1):
 #
@@ -86,5 +86,7 @@ cluster.name: westernwall
 #
 # Require explicit names when deleting indices:
 #
-# System call filter check, see https://www.elastic.co/guide/en/elasticsearch/reference/6.0/_system_call_filter_check.html#_system_call_filter_check
+# Disable system call filter check
+# see https://www.elastic.co/guide/en/elasticsearch/reference/6.0/_system_call_filter_check.html#_system_call_filter_check
 #bootstrap.system_call_filter: false
+
