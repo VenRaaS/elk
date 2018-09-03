@@ -4,7 +4,9 @@ PUT _template/template_oua
     "template":"*_oua*",
     "settings":{
         "index":{
-            "number_of_shards":"1"
+            "number_of_shards":"1",
+            "auto_expand_replicas":"1-5",
+            "refresh_interval":"5s"
         }
     },
     "mappings":{
