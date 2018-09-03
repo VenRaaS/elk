@@ -50,11 +50,9 @@ bootstrap.memory_lock: true
 #
 # ---------------------------------- Network -----------------------------------
 #
-network.host: _gce_
-
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
-#network.host: 192.168.0.1
+network.host: 140.96.83.31
 #
 # Set a custom port for HTTP:
 #
@@ -64,15 +62,6 @@ network.host: _gce_
 #
 # --------------------------------- Discovery ----------------------------------
 #
-cloud:
-    gce:
-        project_id: venraas-test
-        zone: asia-east1-b
-discovery:
-    zen.hosts_provider: gce
-    gce:
-        tags: es-ww
-
 # Pass an initial list of hosts to perform discovery when new node is started:
 # The default list of hosts is ["127.0.0.1", "[::1]"]
 #
@@ -97,3 +86,7 @@ discovery:
 # Require explicit names when deleting indices:
 #
 #action.destructive_requires_name: true
+#
+# Disable system call filter check
+# see https://www.elastic.co/guide/en/elasticsearch/reference/6.0/_system_call_filter_check.html#_system_call_filter_check
+#bootstrap.system_call_filter: false
