@@ -4,7 +4,7 @@ PUT _template/template_mod
     "template":"*_mod*",
     "settings":{
         "index":{
-            "number_of_shards":"1",
+            "number_of_shards":"2",
             "auto_expand_replicas":"1-3",
             "refresh_interval":"5s"
         }
