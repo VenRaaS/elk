@@ -5,7 +5,7 @@ PUT _template/template_gocc
     "settings":{
         "index":{
             "number_of_shards":"1",
-            "auto_expand_replicas":"0-5",
+            "auto_expand_replicas":"1-5",
             "refresh_interval":"5s"
         }
     },
