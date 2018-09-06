@@ -50,7 +50,8 @@ bootstrap.memory_lock: true
 #
 # ---------------------------------- Network -----------------------------------
 #
-network.host: _gce_
+network.host: 0.0.0.0
+#network.host: _gce_
 
 # Set the bind address to a specific IP (IPv4 or IPv6):
 #
@@ -100,4 +101,4 @@ discovery:
 #
 # Disable system call filter check
 # see https://www.elastic.co/guide/en/elasticsearch/reference/6.0/_system_call_filter_check.html#_system_call_filter_check
-#bootstrap.system_call_filter: false
+bootstrap.system_call_filter: false
