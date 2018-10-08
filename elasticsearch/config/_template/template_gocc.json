@@ -47,7 +47,8 @@ PUT _template/template_gocc
                     "str_default":{
                         "match_mapping_type":"string",
                         "mapping":{
-                            "type":"keyword"                            
+                            "type":"keyword",
+                            "ignore_above": 128
                         }
                     }
                 }
@@ -56,10 +57,12 @@ PUT _template/template_gocc
         "goods":{
             "properties":{
                 "gid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "pgid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "goods_name":{
                     "type":"text",
@@ -119,23 +122,28 @@ PUT _template/template_gocc
         "orderlist":{
             "properties":{
                 "uid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "order_no":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "seq":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "order_date":{
                     "type":"date",
                     "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 },
                 "gid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "currency":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "sale_price":{
                     "type":"scaled_float",
@@ -153,17 +161,20 @@ PUT _template/template_gocc
                     "scaling_factor":1000
                 },
                 "promo_id":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "affiliate_id":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "dc_price":{
                     "type":"scaled_float",
                     "scaling_factor":1000
                 },
                 "delivery_type":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 }
             }
         },
@@ -178,46 +189,56 @@ PUT _template/template_gocc
         "group2gid":{
             "properties":{
                 "group_id":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "gid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 }
             }
         },
         "customer":{
             "properties":{
                 "uid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "gender":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "b_date":{
                     "type":"date",
                     "format":"epoch_second || yyyy-MM-dd HH:mm:ss || yyyy-MM-dd'T'HH:mm:ss"
                 },
                 "country":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "area_1":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "area_2":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 }
             }
         },
         "goodscatecode":{
             "properties":{
                 "gid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "category_code":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "le":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "sort":{
                     "type":"scaled_float",
@@ -237,33 +258,40 @@ PUT _template/template_gocc
                     "term_vector":"with_positions_offsets"
                 },
                 "p_category_code":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "category_code":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "le":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 }
             }
         },
         "group2category":{
             "properties":{
                 "group_id":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "category_code":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 }
             }
         },
         "group_sort":{
             "properties":{
                 "group_id":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "group_name":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "sort":{
                     "type":"scaled_float",
