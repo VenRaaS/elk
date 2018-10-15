@@ -56,7 +56,8 @@ PUT _template/template_oua
                     "str_default":{
                         "match_mapping_type":"string",
                         "mapping":{
-                            "type":"keyword"
+                            "type":"keyword",
+                            "ignore_above": 128
                         }
                     }
                 }
@@ -66,13 +67,16 @@ PUT _template/template_oua
             "dynamic": false,
             "properties":{
                 "uid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "ven_guid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "device":{
-                    "type":"keyword"                    
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "insert_dt":{
                     "type":"date",
