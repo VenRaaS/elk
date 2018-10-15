@@ -56,7 +56,8 @@ PUT _template/template_opp
                     "str_default":{
                         "match_mapping_type":"string",
                         "mapping":{
-                            "type":"keyword"                            
+                            "type":"keyword",
+                            "ignore_above": 128
                         }
                     }
                 }
@@ -66,31 +67,39 @@ PUT _template/template_opp
             "dynamic": false,
             "properties":{
                 "action":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "uid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "ven_guid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "ven_session":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "device":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "gid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "category_code":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "client_ip":{
                     "type":"ip"
                 },
                 "page_type":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "geo_location":{
                     "type":"geo_point"
@@ -105,16 +114,20 @@ PUT _template/template_opp
             "dynamic": false,
             "properties":{
                 "w_list_type":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "uid":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "categ_code":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "gid,":{
-                    "type":"keyword"
+                    "type":"keyword",
+                    "ignore_above": 128
                 },
                 "insert_dt":{
                     "type":"date",
