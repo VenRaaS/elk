@@ -17,7 +17,8 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
                         "match_mapping_type":"string",
                         "mapping":{
                             "type":"string",
-                            "index":"analyzed"
+                            "index":"analyzed",
+                            "ignore_above": 256
                         }
                     }
                 },
@@ -27,7 +28,8 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
                         "match_mapping_type":"string",
                         "mapping":{  
                             "type":"string",
-                            "index":"not_analyzed"
+                            "index":"not_analyzed",
+                            "ignore_above": 256
                         }
                     }
                 }
@@ -41,11 +43,13 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
                 },
                 "http_forward_headers": {
                     "type": "string",
-                    "index": "not_analyzed"
+                    "index": "not_analyzed",
+                    "ignore_above": 256
                 },
                 "routing_reset_interval":{
                     "type":"string",
-                    "index":"not_analyzed"
+                    "index":"not_analyzed",
+                    "ignore_above": 256
                 },
                 "update_dt":{
                     "type":"date",
@@ -68,6 +72,10 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
                     "type":"string",
                     "index":"not_analyzed"
                 },
+                "rec_logic":{
+                    "type":"object",                        
+                    "enabled":false
+		},
                 "group_key":{
                     "type":"string",
                     "index":"not_analyzed"
@@ -107,11 +115,13 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
             "properties":{
                 "uid":{
                     "type":"string",
-                    "index":"not_analyzed"
+                    "index":"not_analyzed",
+                    "ignore_above": 256
                 },
                 "group_key":{
                     "type":"string",
-                    "index":"not_analyzed"
+                    "index":"not_analyzed",
+                    "ignore_above": 256
                 },
                 "update_dt":{
                     "type":"date",
