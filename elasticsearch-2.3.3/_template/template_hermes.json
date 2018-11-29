@@ -2,6 +2,12 @@ PUT http://$HOSTNAME:9200/_template/template_hermes/
 
 {  
     "template":"*_hermes",
+    "settings":{
+        "index":{
+            "number_of_shards":"1",
+            "auto_expand_replicas":"0-all"            
+        }
+    },	
     "mappings":{  
         "_default_":{  
             "_all":{  
